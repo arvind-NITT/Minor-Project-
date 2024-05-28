@@ -4,6 +4,7 @@
     {
         public int ProfileID { get; set; }
         public int UserID { get; set; }
+        public string Gender { get; set; }
         public string MaritalStatus { get; set; } // Consider using an enum
         public decimal Height { get; set; }
         public string Education { get; set; }
@@ -14,7 +15,7 @@
         public string Interests { get; set; }
         public string PartnerExpectations { get; set; }
 
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 
 }

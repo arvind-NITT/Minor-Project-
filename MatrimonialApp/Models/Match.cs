@@ -8,8 +8,8 @@
         public string MatchStatus { get; set; } // Consider using an enum
         public DateTime MatchDate { get; set; }
 
-        public virtual User User1 { get; set; }
-        public virtual User User2 { get; set; }
+        //public virtual User User1 { get; set; }
+        //public virtual User User2 { get; set; }
     }
 
 }
