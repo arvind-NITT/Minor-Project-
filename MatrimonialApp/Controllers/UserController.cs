@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
+using System.Security.Claims;
 
 namespace MatrimonialApp.Controllers
 {
@@ -27,6 +28,10 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<LoginReturnDTO>> Login(UserLoginDTO userLoginDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             try
             {
                 var result = await _userService.Login(userLoginDTO);
@@ -55,16 +60,21 @@ namespace MatrimonialApp.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetMyMatches/{userId}")]
+        [HttpGet("GetMyMatches")]
         [ProducesResponseType(typeof(IEnumerable<MatchDetailsDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<MatchDetailsDTO>>> GetMyMatches(int userId)
+        public async Task<ActionResult<IEnumerable<MatchDetailsDTO>>> GetMyMatches()
         {
-            try
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
             {
-                LoginReturnDTO loginReturnDTO = new LoginReturnDTO();
-                loginReturnDTO.UserID = userId;
-                var result = await _userService.GetMyMatchs(loginReturnDTO);
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
+            try
+            { 
+                var result = await _userService.GetMyMatchs(userId);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -78,9 +88,17 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<MatchReturnDTO>>> FindMyMatch(MatchDTO matchDTO)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
-                var result = await _userService.FindMyMatch(matchDTO);
+
+                var result = await _userService.FindMyMatch(userId, matchDTO);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -89,27 +107,6 @@ namespace MatrimonialApp.Controllers
             }
         }
 
-        [Authorize]
-        [HttpPost("MakeMyProfile")]
-        [ProducesResponseType(typeof(Profile), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Profile>> MakeMyProfile(ProfileDTO profileDTO)
-        {
-            if (profileDTO == null)
-            {
-                return BadRequest(new ErrorModel(400, "Profile data is required."));
-            }
-
-            try
-            {
-                var profile = await _userService.MakeMyProfile(profileDTO);
-                return Ok(profile);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new ErrorModel(500, ex.Message));
-            }
-        }
 
     }
 }

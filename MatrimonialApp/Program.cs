@@ -1,4 +1,6 @@
 using MatrimonialApp.Contexts;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Repositories;
@@ -7,6 +9,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 
 namespace MatrimonialApp
 {
@@ -17,10 +21,16 @@ namespace MatrimonialApp
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            
             //  builder.Services.AddLogging(l => l.AddLog4Net());
             builder.Services.AddSwaggerGen();
             //Debug.WriteLine(builder.Configuration["TokenKey:JWT"]);
@@ -29,10 +39,13 @@ namespace MatrimonialApp
                 {
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey:JWT"]))
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                     };
 
                 });
@@ -57,6 +70,9 @@ namespace MatrimonialApp
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IMatchService, MatchService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IProfileService, ProfileService>();
+            builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
+
             #endregion
 
             var app = builder.Build();
@@ -69,7 +85,6 @@ namespace MatrimonialApp
             }
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

@@ -2,6 +2,7 @@
 using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace MatrimonialApp.Repositories
 {
@@ -34,7 +35,8 @@ namespace MatrimonialApp.Repositories
 
         public async Task<Subscription> Get(int key)
         {
-            return (await _context.Subscriptions.SingleOrDefaultAsync(u => u.SubscriptionID == key)) ?? throw new Exception("No Subscription with the given ID");
+            Console.WriteLine(key);
+            return (await _context.Subscriptions.SingleOrDefaultAsync(u => u.UserID == key)) ?? throw new Exception("No Subscription with the given ID");
         }
 
         public async Task<IEnumerable<Subscription>> Get()
@@ -49,14 +51,28 @@ namespace MatrimonialApp.Repositories
 
         public async Task<Subscription> Update(Subscription item)
         {
-            var Subscription = await Get(item.SubscriptionID);
-            if (Subscription != null)
+            Console.WriteLine("Updating");
+            try
             {
-                _context.Update(item);
-                await _context.SaveChangesAsync();
-                return Subscription;
+                var data = await _context.Subscriptions.FindAsync(item.SubscriptionID); // Use context directly
+                if (data == null)
+                {
+                    throw new Exception("Match not found.");
+                }
+
+                // Update properties
+                data.SubscriptionType = item.SubscriptionType;
+                data.StartDate = item.StartDate;
+                data.EndDate = item.EndDate;
+
+                _context.Entry(data).State = EntityState.Modified; // Mark entity as modified
+                await _context.SaveChangesAsync(); // Save changes to database
+                return data;
             }
-            throw new Exception("No Subscription with the given ID");
+            catch (Exception ex)
+            { 
+                throw new Exception("No Subscription with the given ID");
+            }
         }
     }
 }

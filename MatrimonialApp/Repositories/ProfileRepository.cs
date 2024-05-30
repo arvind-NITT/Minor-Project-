@@ -16,6 +16,7 @@ namespace MatrimonialApp.Repositories
         public async Task<Profile> Add(Profile item)
         {
             _context.Add(item);
+            Console.WriteLine(item.ProfileID + "dfjbndm");
             await _context.SaveChangesAsync();
             return item;
         }
@@ -32,9 +33,13 @@ namespace MatrimonialApp.Repositories
             throw new Exception("No Profile with the given ID");
         }
 
+        //public async Task<Profile> GetProfilebyUserId(int key)
+        //{
+        //    return (await _context.Profiles.SingleOrDefaultAsync(u => u.UserID == key)) ?? throw new Exception("No Profile with the given ID");
+        //}
         public async Task<Profile> Get(int key)
         {
-            return (await _context.Profiles.SingleOrDefaultAsync(u => u.ProfileID == key)) ?? throw new Exception("No Profile with the given ID");
+            return (await _context.Profiles.SingleOrDefaultAsync(u => u.UserID == key)) ?? throw new Exception("No Profile with the given ID");
         }
 
         public async Task<IEnumerable<Profile>> Get()

@@ -47,16 +47,31 @@ namespace MatrimonialApp.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<Match> Update(Match item)
+        public async Task<Match> Update(Match match)
         {
-            var user = await Get(item.MatchID);
-            if (user != null)
+            try
             {
-                _context.Update(item);
-                await _context.SaveChangesAsync();
-                return user;
+                var data = await _context.Matchs.FindAsync(match.MatchID); // Use context directly
+                if (data == null)
+                {
+                    throw new Exception("Match not found.");
+                }
+
+                // Update properties
+                data.MatchStatus = match.MatchStatus;
+                data.MatchDate = match.MatchDate;
+
+                _context.Entry(data).State = EntityState.Modified; // Mark entity as modified
+                await _context.SaveChangesAsync(); // Save changes to database
+
+                return data;
             }
+            catch
+            {
             throw new Exception("No user with the given ID");
+            }
+         
+
         }
     }
 }

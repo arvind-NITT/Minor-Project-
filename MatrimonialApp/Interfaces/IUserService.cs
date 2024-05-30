@@ -8,8 +8,7 @@ namespace MatrimonialApp.Interfaces
     {
         public Task<LoginReturnDTO> Login(UserLoginDTO loginDTO);
         public Task<User> Register(UserDTO userDTO);
-        public Task<Profile> MakeMyProfile(ProfileDTO profileDTO);
-        public Task<IEnumerable<MatchDetailsDTO>> GetMyMatchs(LoginReturnDTO loginReturnDTO);
-        public Task<IEnumerable<MatchReturnDTO>> FindMyMatch(MatchDTO matchDTO);
+        public Task<IEnumerable<MatchDetailsDTO>> GetMyMatchs(int id);
+        public Task<IEnumerable<MatchReturnDTO>> FindMyMatch(int UserId,MatchDTO matchDTO);
     }
 }

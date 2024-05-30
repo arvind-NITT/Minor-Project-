@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MatrimonialApp.Migrations
 {
-    public partial class Initial : Migration
+    public partial class ModelUpdates : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,8 +17,8 @@ namespace MatrimonialApp.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID1 = table.Column<int>(type: "int", nullable: false),
                     UserID2 = table.Column<int>(type: "int", nullable: false),
-                    MatchStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MatchDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    MatchDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MatchStatus = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +33,7 @@ namespace MatrimonialApp.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<int>(type: "int", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MaritalStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MaritalStatus = table.Column<int>(type: "int", nullable: false),
                     Height = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Education = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Income = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -55,7 +55,7 @@ namespace MatrimonialApp.Migrations
                     SubscriptionID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<int>(type: "int", nullable: false),
-                    SubscriptionType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubscriptionType = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Basic"),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -70,8 +70,8 @@ namespace MatrimonialApp.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -106,12 +106,12 @@ namespace MatrimonialApp.Migrations
             migrationBuilder.InsertData(
                 table: "Matchs",
                 columns: new[] { "MatchID", "MatchDate", "MatchStatus", "UserID1", "UserID2" },
-                values: new object[] { 102, new DateTime(2023, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), "Amali@gmail.com", 102, 103 });
+                values: new object[] { 102, new DateTime(2023, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, 102, 103 });
 
             migrationBuilder.InsertData(
                 table: "Profiles",
                 columns: new[] { "ProfileID", "Caste", "Education", "Gender", "Height", "Income", "Interests", "MaritalStatus", "MotherTongue", "PartnerExpectations", "Religion", "UserID" },
-                values: new object[] { 102, "Mali", "MCA", "Male", 102m, 950000m, "Sports", "Married", "Hindi", "Nothing", "Hindu", 102 });
+                values: new object[] { 102, "Mali", "MCA", "Male", 102m, 950000m, "Sports", 1, "Hindi", "Nothing", "Hindu", 102 });
 
             migrationBuilder.InsertData(
                 table: "Subscriptions",

@@ -1,9 +1,11 @@
 ﻿using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
+using MatrimonialApp.Models.DTOs;
 using MatrimonialApp.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace MatrimonialApp.Controllers
 {
@@ -22,11 +24,22 @@ namespace MatrimonialApp.Controllers
         [HttpPost("AddTheMatch")]
         [ProducesResponseType(typeof(Match), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Match>> AddTheMatch(Match match)
+        public async Task<ActionResult<Match>> AddTheMatch(MatchUpdateDTO matchUpdateDTO)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int user1 = int.Parse(userIdClaim.Value);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             try
             {
-                var newMatch = await _matchService.AddTheMatch(match);
+                var newMatch = await _matchService.AddTheMatch(user1, matchUpdateDTO);
                 return Ok(newMatch);
             }
             catch (Exception ex)
@@ -51,12 +64,19 @@ namespace MatrimonialApp.Controllers
             }
         }
         [Authorize]
-        [HttpGet("GetTheMatchbyuserId/{user1}/{user2}")]
+        [HttpGet("GetTheMatchbyuserId/{user2}")]
         [ProducesResponseType(typeof(Match), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Match>> GetTheMatchbyuserId(int user1, int user2)
+        public async Task<ActionResult<Match>> GetTheMatchbyuserId(int user2)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int user1 = int.Parse(userIdClaim.Value);
             try
             {
                 var match = await _matchService.GetTheMatchbyuserId(user1, user2);
@@ -78,9 +98,16 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Match>> RemoveTheMatch(int id)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
-                var match = await _matchService.RemoveTheMatch(id);
+                var match = await _matchService.RemoveTheMatch(userId,id);
                 return Ok(match);
             }
             catch (ArgumentException ex)
@@ -97,11 +124,22 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(Match), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Match>> UpdateMatchStatus(Match match)
+        public async Task<ActionResult<Match>> UpdateMatchStatus(MatchUpdateDTO matchUpdateDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
-                var updatedMatch = await _matchService.UpdateMatchStatus(match);
+                var updatedMatch = await _matchService.UpdateMatchStatus(userId, matchUpdateDTO);
                 return Ok(updatedMatch);
             }
             catch (Exception ex)

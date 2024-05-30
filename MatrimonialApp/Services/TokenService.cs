@@ -9,24 +9,37 @@ namespace MatrimonialApp.Services
 {
     public class TokenService : ITokenService
     {
-        private readonly string _secretKey;
         private readonly SymmetricSecurityKey _key;
+        private readonly string _issuer;
+        private readonly string _audience;
 
         public TokenService(IConfiguration configuration)
         {
-            _secretKey = configuration.GetSection("TokenKey").GetSection("JWT").Value.ToString();
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
+            var jwtSection = configuration.GetSection("Jwt");
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSection["Key"]));
+            _issuer = jwtSection["Issuer"];
+            _audience = jwtSection["Audience"];
         }
         public string GenerateToken(User user)
         {
-            string token = string.Empty;
+            //string token = string.Empty;
             var claims = new List<Claim>(){
-                new Claim(ClaimTypes.Name, user.UserId.ToString())
+               new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
             };
             var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
-            var myToken = new JwtSecurityToken(null, null, claims, expires: DateTime.Now.AddDays(2), signingCredentials: credentials);
-            token = new JwtSecurityTokenHandler().WriteToken(myToken);
-            return token;
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(2),
+                SigningCredentials = credentials,
+                Issuer = _issuer,
+                Audience = _audience
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            return tokenHandler.WriteToken(token);
         }
     }
 }

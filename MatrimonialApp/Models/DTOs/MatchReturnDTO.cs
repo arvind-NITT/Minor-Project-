@@ -1,5 +1,12 @@
 ﻿namespace MatrimonialApp.Models.DTOs
 {
+    //public enum MaritalStatus
+    //{
+    //    Single,
+    //    Married,
+    //    Divorced,
+    //    Widowed
+    //}
     public class MatchReturnDTO
     {
 
@@ -12,7 +19,7 @@
         public string ProfilePicture { get; set; }
 
         // Profile Information
-        public string MaritalStatus { get; set; } // Consider using an enum
+        public MaritalStatus MaritalStatus { get; set; } // Consider using an enum
         public decimal Height { get; set; }
         public string Education { get; set; }
         public decimal Income { get; set; }
@@ -21,6 +28,7 @@
         public string MotherTongue { get; set; }
         public string Interests { get; set; }
         public string PartnerExpectations { get; set; }
+        public int MatchScore { get; set; } // Add MatchScore property
 
 
     }

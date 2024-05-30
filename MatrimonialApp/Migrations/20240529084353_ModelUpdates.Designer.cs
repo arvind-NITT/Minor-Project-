@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MatrimonialApp.Migrations
 {
     [DbContext(typeof(MatrimonialContext))]
-    [Migration("20240527093411_Initial")]
-    partial class Initial
+    [Migration("20240529084353_ModelUpdates")]
+    partial class ModelUpdates
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,9 +35,8 @@ namespace MatrimonialApp.Migrations
                     b.Property<DateTime>("MatchDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MatchStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MatchStatus")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserID1")
                         .HasColumnType("int");
@@ -54,7 +53,7 @@ namespace MatrimonialApp.Migrations
                         {
                             MatchID = 102,
                             MatchDate = new DateTime(2023, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MatchStatus = "Amali@gmail.com",
+                            MatchStatus = 0,
                             UserID1 = 102,
                             UserID2 = 103
                         });
@@ -90,9 +89,8 @@ namespace MatrimonialApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaritalStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MaritalStatus")
+                        .HasColumnType("int");
 
                     b.Property<string>("MotherTongue")
                         .IsRequired()
@@ -123,7 +121,7 @@ namespace MatrimonialApp.Migrations
                             Height = 102m,
                             Income = 950000m,
                             Interests = "Sports",
-                            MaritalStatus = "Married",
+                            MaritalStatus = 1,
                             MotherTongue = "Hindi",
                             PartnerExpectations = "Nothing",
                             Religion = "Hindu",
@@ -147,7 +145,9 @@ namespace MatrimonialApp.Migrations
 
                     b.Property<string>("SubscriptionType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Basic");
 
                     b.Property<int>("UserID")
                         .HasColumnType("int");
@@ -188,11 +188,13 @@ namespace MatrimonialApp.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
@@ -256,8 +258,8 @@ namespace MatrimonialApp.Migrations
             modelBuilder.Entity("MatrimonialApp.Models.UserDetail", b =>
                 {
                     b.HasOne("MatrimonialApp.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                        .WithOne()
+                        .HasForeignKey("MatrimonialApp.Models.UserDetail", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
