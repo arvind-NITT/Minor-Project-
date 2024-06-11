@@ -2,6 +2,7 @@
 using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MatrimonialApp.Repositories
 {
@@ -23,7 +24,7 @@ namespace MatrimonialApp.Repositories
 
         public async Task<Profile> Delete(int key)
         {
-            var user = await Get(key);
+            var user = await _context.Profiles.FirstAsync(u => u.UserID == key) ; 
             if (user != null)
             {
                 _context.Remove(user);
@@ -54,7 +55,8 @@ namespace MatrimonialApp.Repositories
 
         public async Task<Profile> Update(Profile item)
         {
-            var user = await Get(item.ProfileID);
+            var user = (await _context.Profiles.SingleOrDefaultAsync(u => u.ProfileID == item.ProfileID)) ?? throw new Exception("No Profile with the given ID");
+
             if (user != null)
             {
                 _context.Update(item);

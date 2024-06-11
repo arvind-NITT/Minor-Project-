@@ -1,27 +1,43 @@
-﻿using MatrimonialApp.Interfaces;
+﻿using MatrimonialApp.Contexts;
+using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace MatrimonialApp.Services
 {
     public class SubscriptionService : ISubscriptionService
     {
+        private readonly MatrimonialContext _context;
         private readonly IRepository<int, Subscription> _subscriptionRepo;
-
-        public SubscriptionService(IRepository<int, Subscription> subscriptionRepo)
+        private readonly IRepository<int, Transaction> _transactionRepository;
+        public SubscriptionService(MatrimonialContext context,IRepository<int, Subscription> subscriptionRepo, IRepository<int, Transaction> transactionRepository)
         {
+            _context = context;
             _subscriptionRepo = subscriptionRepo;
+             _transactionRepository = transactionRepository;
         }
 
-        public async Task<Subscription> AddNewSubscription(Subscription subscription)
+        public async Task<Subscription> AddNewSubscription(int userId, SubscriptionDTO subscriptionDTO)
         {
-            if (subscription == null)
+            if (subscriptionDTO == null)
             {
-                throw new ArgumentNullException(nameof(subscription), "Subscription cannot be null.");
+                throw new ArgumentNullException(nameof(subscriptionDTO), "Subscription cannot be null.");
             }
 
             try
             {
+                var startDate = DateTime.Now;
+                var endDate = startDate.AddDays(60);
+
+                var subscription = new Subscription
+                {
+                    UserId = userId,
+                    Type = subscriptionDTO.Type,
+                    TransactionId = 0,
+                    StartDate = startDate,
+                    EndDate = endDate
+                };
                 return await _subscriptionRepo.Add(subscription);
             }
             catch (Exception ex)
@@ -83,7 +99,7 @@ namespace MatrimonialApp.Services
             }
         }
 
-        public async Task<Subscription> UpdateSubscription(SubscriptionDTO subscriptionDTO)
+        public async Task<Subscription> UpdateSubscription(int userId, SubscriptionDTO subscriptionDTO)
         {
             if (subscriptionDTO == null)
             {
@@ -92,23 +108,39 @@ namespace MatrimonialApp.Services
 
             try
             {
-                var existingSubscription = await _subscriptionRepo.Get(subscriptionDTO.UserID);
+                var existingSubscription=   await _context.Subscriptions.SingleOrDefaultAsync(u => u.UserId == userId);
                 if (existingSubscription == null)
                 {
                     throw new Exception("Subscription not found.");
                 }
-
+                var transaction = await _transactionRepository.Get(subscriptionDTO.TransactionId);
+                if(transaction == null )
+                {
+                    throw new Exception("Transaction not found.");
+                }
+                if (transaction.UserId != userId || transaction.IsApproved == true)
+                {
+                    throw new Exception("Invalid Transaction");
+                }
+                else
+                {
+                    transaction.IsApproved = true;
+                    await _transactionRepository.Update(transaction);
+                }
+                var startDate = DateTime.Now;
+                var endDate = startDate.AddDays(60);
                 // Map the DTO to the Subscription model
                 var updatedSubscription = new Subscription
                 {
-                    //SubscriptionID = subscriptionDTO.SubscriptionID,
-                    SubscriptionID= existingSubscription.SubscriptionID,
-                    UserID = subscriptionDTO.UserID,
-                    StartDate = subscriptionDTO.StartDate,
-                    EndDate = subscriptionDTO.EndDate,
-                    SubscriptionType = subscriptionDTO.SubscriptionType
+                    SubscriptionId = existingSubscription.SubscriptionId,
+                    UserId = userId,
+                    Type = subscriptionDTO.Type,
+                    TransactionId = subscriptionDTO.TransactionId,
+                    StartDate = startDate,
+                    EndDate = endDate
                 };
 
+                
                 return await _subscriptionRepo.Update(updatedSubscription);
             }
             catch (Exception ex)

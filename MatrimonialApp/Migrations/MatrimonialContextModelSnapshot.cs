@@ -45,16 +45,6 @@ namespace MatrimonialApp.Migrations
                     b.HasKey("MatchID");
 
                     b.ToTable("Matchs");
-
-                    b.HasData(
-                        new
-                        {
-                            MatchID = 102,
-                            MatchDate = new DateTime(2023, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MatchStatus = 0,
-                            UserID1 = 102,
-                            UserID2 = 103
-                        });
                 });
 
             modelBuilder.Entity("MatrimonialApp.Models.Profile", b =>
@@ -108,61 +98,73 @@ namespace MatrimonialApp.Migrations
                     b.HasKey("ProfileID");
 
                     b.ToTable("Profiles");
-
-                    b.HasData(
-                        new
-                        {
-                            ProfileID = 102,
-                            Caste = "Mali",
-                            Education = "MCA",
-                            Gender = "Male",
-                            Height = 102m,
-                            Income = 950000m,
-                            Interests = "Sports",
-                            MaritalStatus = 1,
-                            MotherTongue = "Hindi",
-                            PartnerExpectations = "Nothing",
-                            Religion = "Hindu",
-                            UserID = 102
-                        });
                 });
 
             modelBuilder.Entity("MatrimonialApp.Models.Subscription", b =>
                 {
-                    b.Property<int>("SubscriptionID")
+                    b.Property<int>("SubscriptionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubscriptionID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubscriptionId"), 1L, 1);
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("SubscriptionType")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("Basic");
-
-                    b.Property<int>("UserID")
+                    b.Property<int>("TransactionId")
                         .HasColumnType("int");
 
-                    b.HasKey("SubscriptionID");
+                    b.Property<int>("Type")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SubscriptionId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Subscriptions");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            SubscriptionID = 102,
-                            EndDate = new DateTime(2023, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StartDate = new DateTime(2023, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SubscriptionType = "Normal",
-                            UserID = 102
-                        });
+            modelBuilder.Entity("MatrimonialApp.Models.Transaction", b =>
+                {
+                    b.Property<int>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"), 1L, 1);
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TransactionType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UPIID")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TransactionId");
+
+                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("MatrimonialApp.Models.User", b =>
@@ -202,6 +204,9 @@ namespace MatrimonialApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
@@ -209,25 +214,27 @@ namespace MatrimonialApp.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = 104,
-                            Address = "",
+                            UserId = 101,
+                            Address = "Chandwasa",
                             DateOfBirth = new DateTime(2000, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "Amali@gmail.com",
                             FirstName = "Arvind",
                             LastName = "Mali",
                             PhoneNumber = "9876543321",
-                            ProfilePicture = ""
+                            ProfilePicture = "",
+                            Role = 0
                         },
                         new
                         {
-                            UserId = 105,
-                            Address = "",
+                            UserId = 102,
+                            Address = "Mandsaur",
                             DateOfBirth = new DateTime(2000, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "Amali1@gmail.com",
                             FirstName = "Arvind1",
                             LastName = "Mali1",
                             PhoneNumber = "9876543321",
-                            ProfilePicture = ""
+                            ProfilePicture = "",
+                            Role = 0
                         });
                 });
 
@@ -251,6 +258,17 @@ namespace MatrimonialApp.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("UserDetails");
+                });
+
+            modelBuilder.Entity("MatrimonialApp.Models.Subscription", b =>
+                {
+                    b.HasOne("MatrimonialApp.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MatrimonialApp.Models.UserDetail", b =>

@@ -9,6 +9,7 @@ using MainRequestTrackerAPI.Models.DTOs;
 using MatrimonialApp.Contexts;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
 namespace MatrimonialApp.Services
 {
@@ -18,15 +19,19 @@ namespace MatrimonialApp.Services
         private readonly IRepository<int, UserDetail> _UserDetailRepo;
         private readonly IRepository<int, User> _UserRepo;
         private readonly IRepository<int, Profile> _ProfileRepo;
+        private readonly IRepository<int, Subscription> _SubscriptionRepo;
+        private readonly IRepository<int, Transaction> _TransactionRepo;
         private readonly ITokenService _tokenService;
 
-        public UserService(MatrimonialContext context, IRepository<int, UserDetail> UserDetailRepo, IRepository<int, User> UserRepo, ITokenService tokenService, IRepository<int, Profile> ProfileRepo)
+        public UserService(MatrimonialContext context, IRepository<int, UserDetail> UserDetailRepo, IRepository<int, User> UserRepo, ITokenService tokenService, IRepository<int, Profile> ProfileRepo, IRepository<int, Subscription> SubscriptionRepo, IRepository<int, Transaction> TransactionRepo)
         {
             _context = context;
             _UserDetailRepo = UserDetailRepo;
             _UserRepo = UserRepo;
             _tokenService = tokenService;
             _ProfileRepo = ProfileRepo;
+            _SubscriptionRepo = SubscriptionRepo;
+            _TransactionRepo = TransactionRepo;
         }
         public async Task<LoginReturnDTO> Login(UserLoginDTO loginDTO)
         {
@@ -75,6 +80,8 @@ namespace MatrimonialApp.Services
                 user = await _UserRepo.Add(user);
                 UserDetail.UserId = user.UserId;
                 UserDetail = await _UserDetailRepo.Add(UserDetail);
+                Transaction transaction = await addInitialTransaction(user.UserId);
+                Subscription subscription = await addInitialSubscription(user.UserId,transaction.TransactionId);
                 ((UserDTO)user).Password = string.Empty;
 
                 return user;
@@ -91,7 +98,7 @@ namespace MatrimonialApp.Services
         {
             LoginReturnDTO returnDTO = new LoginReturnDTO();
             returnDTO.UserID = User.UserId;
-            //returnDTO.Role = User.Role ?? "UserDetail";
+            returnDTO.Role = User.Role ;
             returnDTO.Token = _tokenService.GenerateToken(User);
             return returnDTO;
         }
@@ -100,7 +107,32 @@ namespace MatrimonialApp.Services
         {
             await _UserDetailRepo.Delete(UserDetail.UserId);
         }
-
+        private  async Task<Subscription> addInitialSubscription(int userid,int tid)
+        {
+            var subscription = new Subscription 
+            {
+                UserId=userid,
+                TransactionId=tid,
+                Type=SubscriptionType.Basic,
+                StartDate=DateTime.Now,
+                EndDate=DateTime.Now.AddDays(60),
+            };
+            return await _SubscriptionRepo.Add(subscription);
+        } 
+        private async Task<Transaction> addInitialTransaction(int userid)
+        {
+            var Trasaction = new Transaction
+            {
+                UserId= userid,
+                Amount=0,
+                TransactionType="Initial Basic Transaction",
+                TransactionDate= DateTime.Now,
+                IsApproved=false,
+                UPIID = "9109705986@UPI"
+            };
+            
+            return await _TransactionRepo.Add(Trasaction);
+        }
         private async Task RevertUserInsert(User User)
         {
 
@@ -169,38 +201,43 @@ namespace MatrimonialApp.Services
             {
                 throw new Exception("User not found.");
             }
-
+            var requestedUserIds = await _context.Matchs
+           .Where(mr => mr.UserID1 == UserId)
+           .Select(mr => mr.UserID2)
+           .ToListAsync();
             var matches = await _context.Users
               .Join(_context.Profiles, u => u.UserId, p => p.UserID, (u, p) => new { User = u, Profile = p })
-              .Where(up => up.User.UserId != UserId &&
-                           up.Profile.Gender == matchDTO.Looking_for ||
-                           (string.IsNullOrEmpty(matchDTO.Religion) || up.Profile.Religion == matchDTO.Religion) ||
-                           (string.IsNullOrEmpty(matchDTO.MotherTongue) || up.Profile.MotherTongue == matchDTO.MotherTongue) ||
-                           (matchDTO.MaritalStatus == null || up.Profile.MaritalStatus == matchDTO.MaritalStatus))
+              .Where(up => (up.User.UserId != UserId && !requestedUserIds.Contains(up.User.UserId)) &&
+                          ( up.Profile.Gender.ToLower() == matchDTO.Looking_for.ToLower() ||
+                           (string.IsNullOrEmpty(matchDTO.Religion) || up.Profile.Religion.ToLower() == matchDTO.Religion.ToLower()) ||
+                           (string.IsNullOrEmpty(matchDTO.MotherTongue) || up.Profile.MotherTongue.ToLower()  == matchDTO.MotherTongue.ToLower()) ||
+                           (matchDTO.MaritalStatus == null || up.Profile.MaritalStatus == matchDTO.MaritalStatus)) )
               .ToListAsync();
 
             var result = matches
-                .Select(up => new
-                {
-                    up.User.UserId,
-                    up.User.FirstName,
-                    up.User.LastName,
-                    up.Profile.Gender,
-                    up.User.DateOfBirth,
-                    up.User.ProfilePicture,
-                    up.Profile.MaritalStatus,
-                    up.Profile.Height,
-                    up.Profile.Education,
-                    up.Profile.Income,
-                    up.Profile.Religion,
-                    up.Profile.Caste,
-                    up.Profile.MotherTongue,
-                    up.Profile.Interests,
-                    up.Profile.PartnerExpectations,
-                    MatchScore = CalculateMatchScore(up.Profile, matchDTO)
-                }).Where(up => up.MatchScore >= 50)
-                .OrderByDescending(up => up.MatchScore) // Order by MatchScore descending
-                .ToList();
+        .Select(up => new
+        {
+            up.User.UserId,
+            up.User.FirstName,
+            up.User.LastName,
+            up.Profile.Gender,
+            up.User.DateOfBirth,
+            up.User.ProfilePicture,
+            up.Profile.MaritalStatus,
+            up.Profile.Height,
+            up.Profile.Education,
+            up.Profile.Income,
+            up.Profile.Religion,
+            up.Profile.Caste,
+            up.Profile.MotherTongue,
+            up.Profile.Interests,
+            up.Profile.PartnerExpectations,
+            AgeDifference = Math.Abs(CalculateAge(up.User.DateOfBirth) - matchDTO.Age),
+            MatchScore = CalculateMatchScore(up.Profile, matchDTO, Math.Abs(CalculateAge(up.User.DateOfBirth) - matchDTO.Age))
+        })
+        .Where(up => up.MatchScore >= 50 && up.AgeDifference <= 2)
+        .OrderByDescending(up => up.MatchScore)
+        .ToList();
 
             return result.Select(up => new MatchReturnDTO
             {
@@ -222,30 +259,45 @@ namespace MatrimonialApp.Services
                 MatchScore = up.MatchScore
             }).ToList();
         }
-        private int CalculateMatchScore(Profile profile, MatchDTO matchDTO)
+        private int CalculateMatchScore(Profile profile, MatchDTO matchDTO,int ageDifference)
         {
             int score = 0;
 
-            if (!string.IsNullOrEmpty(matchDTO.Religion) && profile.Religion == matchDTO.Religion)
+            if (!string.IsNullOrEmpty(matchDTO.Religion) && profile.Religion.ToLower() == matchDTO.Religion.ToLower())
             {
-                score= score + 25;
+                score= score + 20;
             }
 
-            if (!string.IsNullOrEmpty(matchDTO.MotherTongue) && profile.MotherTongue == matchDTO.MotherTongue)
+            if (!string.IsNullOrEmpty(matchDTO.MotherTongue) && profile.MotherTongue.ToLower() == matchDTO.MotherTongue.ToLower())
             {
-                score = score + 25;
+                score = score + 20;
             }
 
             if (matchDTO.MaritalStatus != null && profile.MaritalStatus == matchDTO.MaritalStatus)
             {
-                score = score + 25;
+                score = score + 20;
+            }
+            if  (matchDTO.Looking_for != null && profile.Gender.ToLower() == matchDTO.Looking_for.ToLower())
+            {
+                score = score + 20;
+            }
+            
+            if (ageDifference <= 2)
+            {
+                score += 20; // Adjust the score value as needed
             }
 
             // Add more criteria as needed...
 
             return score;
         }
-
+        private int CalculateAge(DateTime birthDate)
+        {
+            var today = DateTime.Today;
+            var age = today.Year - birthDate.Year;
+            if (birthDate.Date > today.AddYears(-age)) age--;
+            return age;
+        }
 
 
     }

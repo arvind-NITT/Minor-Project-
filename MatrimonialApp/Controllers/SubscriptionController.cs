@@ -3,6 +3,7 @@ using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace MatrimonialApp.Controllers
 {
@@ -24,20 +25,22 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Subscription>> AddSubscription([FromBody] SubscriptionDTO subscriptionDTO)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
+            
             try
             {
-                var subscription = new Subscription
+                var subs = await _subscriptionService.GetTheSubscriptionByUserId(userId);
+                if (subs != null)
                 {
-                    // Map properties from subscriptionDTO to subscription
-                    UserID = subscriptionDTO.UserID,
-                    StartDate = subscriptionDTO.StartDate,
-                    EndDate = subscriptionDTO.EndDate,
-                    SubscriptionType = subscriptionDTO.SubscriptionType
-                    //Plan = subscriptionDTO.Plan,
-                    //Status = subscriptionDTO.Status
-                };
-
-                var result = await _subscriptionService.AddNewSubscription(subscription);
+                    throw new Exception("Subscription Already Exists. Please Go for Update");
+                }
+                var result = await _subscriptionService.AddNewSubscription(userId,subscriptionDTO);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -64,11 +67,18 @@ namespace MatrimonialApp.Controllers
             }
         }
 
-        [HttpGet("GetSubscriptionByUserId/{userId}")]
+        [HttpGet("GetSubscriptionByUserId")]
         [ProducesResponseType(typeof(Subscription), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Subscription>> GetSubscriptionByUserId(int userId)
+        public async Task<ActionResult<Subscription>> GetSubscriptionByUserId()
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
                 var result = await _subscriptionService.GetTheSubscriptionByUserId(userId);
@@ -81,14 +91,21 @@ namespace MatrimonialApp.Controllers
             }
         }
 
-        [HttpDelete("RemoveSubscription/{id}")]
+        [HttpDelete("RemoveSubscription")]
         [ProducesResponseType(typeof(Subscription), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Subscription>> RemoveSubscription(int id)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
-                var result = await _subscriptionService.RemoveTheSubscription(id);
+                var result = await _subscriptionService.RemoveTheSubscription(userId);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -103,10 +120,17 @@ namespace MatrimonialApp.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Subscription>> UpdateSubscription([FromBody] SubscriptionDTO subscriptionDTO)
         {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            int userId = int.Parse(userIdClaim.Value);
             try
             {
               
-                var result = await _subscriptionService.UpdateSubscription(subscriptionDTO);
+                var result = await _subscriptionService.UpdateSubscription(userId,subscriptionDTO);
                 return Ok(result);
             }
             catch (Exception ex)

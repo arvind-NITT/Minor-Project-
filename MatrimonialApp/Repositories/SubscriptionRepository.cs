@@ -9,7 +9,6 @@ namespace MatrimonialApp.Repositories
     public class SubscriptionRepository : IRepository<int, Subscription>
     {
         private MatrimonialContext _context;
-
         public SubscriptionRepository(MatrimonialContext context)
         {
             _context = context;
@@ -36,7 +35,7 @@ namespace MatrimonialApp.Repositories
         public async Task<Subscription> Get(int key)
         {
             Console.WriteLine(key);
-            return (await _context.Subscriptions.SingleOrDefaultAsync(u => u.UserID == key)) ?? throw new Exception("No Subscription with the given ID");
+            return (await _context.Subscriptions.SingleOrDefaultAsync(u => u.UserId == key)) ?? throw new Exception("No Subscription with the given ID");
         }
 
         public async Task<IEnumerable<Subscription>> Get()
@@ -54,17 +53,18 @@ namespace MatrimonialApp.Repositories
             Console.WriteLine("Updating");
             try
             {
-                var data = await _context.Subscriptions.FindAsync(item.SubscriptionID); // Use context directly
+                var data = await _context.Subscriptions.FindAsync(item.SubscriptionId); // Use context directly
                 if (data == null)
                 {
-                    throw new Exception("Match not found.");
+                    throw new Exception("Subscription not found.");
                 }
-
+                Console.WriteLine("vfbdnsm,");
                 // Update properties
-                data.SubscriptionType = item.SubscriptionType;
+                data.TransactionId = item.TransactionId;
+                data.Type = item.Type;
                 data.StartDate = item.StartDate;
                 data.EndDate = item.EndDate;
-
+                _context.Subscriptions.Update(data);
                 _context.Entry(data).State = EntityState.Modified; // Mark entity as modified
                 await _context.SaveChangesAsync(); // Save changes to database
                 return data;

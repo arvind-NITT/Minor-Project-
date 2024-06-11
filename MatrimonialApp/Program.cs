@@ -63,6 +63,7 @@ namespace MatrimonialApp
             builder.Services.AddScoped<IRepository<int, Match>, MatchRepository>();
             builder.Services.AddScoped<IRepository<int, Profile>, ProfileRepository>();
             builder.Services.AddScoped<IRepository<int, Subscription>, SubscriptionRepository>();
+            builder.Services.AddScoped<IRepository<int, Transaction>, TransactionRepository>();
             #endregion
 
             #region services
@@ -72,6 +73,8 @@ namespace MatrimonialApp
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IProfileService, ProfileService>();
             builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
+            builder.Services.AddScoped<ITransactionService, TransactionService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
 
             #endregion
 

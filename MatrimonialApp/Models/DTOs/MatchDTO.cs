@@ -19,7 +19,7 @@ namespace MainRequestTrackerAPI.Models.DTOs
 
         [Required(ErrorMessage = "Age is required.")]
         [RegularExpression(@"^\d+$", ErrorMessage = "Age must be a numeric value.")]
-        public string Age { get; set; }
+        public int Age { get; set; }
 
         [Required(ErrorMessage = "Religion is required.")]
         public string Religion { get; set; }

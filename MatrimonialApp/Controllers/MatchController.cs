@@ -24,7 +24,7 @@ namespace MatrimonialApp.Controllers
         [HttpPost("AddTheMatch")]
         [ProducesResponseType(typeof(Match), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Match>> AddTheMatch(MatchUpdateDTO matchUpdateDTO)
+        public async Task<ActionResult<Match>> AddTheMatch(MatchInsertDTO matchInsertDTO)
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
@@ -39,7 +39,7 @@ namespace MatrimonialApp.Controllers
             }
             try
             {
-                var newMatch = await _matchService.AddTheMatch(user1, matchUpdateDTO);
+                var newMatch = await _matchService.AddTheMatch(user1, matchInsertDTO);
                 return Ok(newMatch);
             }
             catch (Exception ex)
