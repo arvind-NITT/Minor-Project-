@@ -2,6 +2,7 @@
 using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace MatrimonialApp.Services
 {
@@ -22,23 +23,37 @@ namespace MatrimonialApp.Services
             {
                 throw new ArgumentNullException(nameof(profiledto), "Profile object cannot be null.");
             }
-            Profile profile = new Profile
-            {
-                
-                UserID = userid,
-                Gender = profiledto.Gender,
-                MaritalStatus = profiledto.MaritalStatus,
-                Height = profiledto.Height,
-                Education = profiledto.Education,
-                Income = profiledto.Income,
-                Religion = profiledto.Religion,
-                Caste = profiledto.Caste,
-                MotherTongue = profiledto.MotherTongue,
-                Interests = profiledto.Interests,
-                PartnerExpectations = profiledto.PartnerExpectations
-            };
-            var newProfile = await _profileRepo.Add(profile);
+            var user = await _context.Users.FindAsync(userid);
+            if(user == null) { throw new ArgumentNullException(nameof(user)); }
+            var puser = await _context.Profiles.FirstOrDefaultAsync(p=> p.UserID == userid);
+           
+           
+            if (puser == null) {
+                Profile profile = new Profile
+                {
+
+                    UserID = userid,
+                    Gender = profiledto.Gender,
+                    MaritalStatus = profiledto.MaritalStatus,
+                    Height = profiledto.Height,
+                    Education = profiledto.Education,
+                    Income = profiledto.Income,
+                    Religion = profiledto.Religion,
+                    Caste = profiledto.Caste,
+                    MotherTongue = profiledto.MotherTongue,
+                    Interests = profiledto.Interests,
+                    PartnerExpectations = profiledto.PartnerExpectations
+                };
+                var newProfile = await _profileRepo.Add(profile);
+            
             return newProfile;
+            }
+            else
+            {
+                var newProfile = await UpdateMyProfile(userid, profiledto);
+
+                return newProfile;
+            }
         }
 
         public async Task<Profile> GetMyProfile(int userId)

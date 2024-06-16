@@ -4,9 +4,10 @@ namespace MatrimonialApp.Models.DTOs
 {
     public class UserLoginDTO
     {
-        [Required(ErrorMessage = "User id cannot be empty")]
-        [Range(100, 999, ErrorMessage = "Invalid entry for User ID")]
-        public int UserId { get; set; }
+        [Required(ErrorMessage = "Email address is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address format.")]
+        [RegularExpression(@"^[a-zA-Z0-9_.+-]+@gmail\.com$", ErrorMessage = "Email must be a Gmail address.")]
+        public string Email { get; set; }
 
 
         [MinLength(6, ErrorMessage = "Password has to be minmum 6 chars long")]

@@ -17,20 +17,20 @@ namespace MatrimonialApp.Repositories
         public async Task<Profile> Add(Profile item)
         {
             _context.Add(item);
-            Console.WriteLine(item.ProfileID + "dfjbndm");
+            Console.WriteLine(item.ProfileID);
             await _context.SaveChangesAsync();
             return item;
         }
 
         public async Task<Profile> Delete(int key)
         {
-            var user = await _context.Profiles.FirstAsync(u => u.UserID == key) ; 
-            if (user != null)
+            var profile = await _context.Profiles.Where(p => p.UserID == key).ToListAsync();
+            if (profile.Any())
             {
-                _context.Remove(user);
-                await _context.SaveChangesAsync();
-                return user;
+                _context.Profiles.RemoveRange(profile);
             }
+                await _context.SaveChangesAsync();
+            return profile[0];
             throw new Exception("No Profile with the given ID");
         }
 

@@ -118,7 +118,14 @@ namespace MatrimonialApp.Controllers
         public async Task<IActionResult> DeleteSubscription(int subscriptionId)
         {
             await _adminService.DeleteSubscriptionAsync(subscriptionId);
-            return NoContent();
+            return Ok("Deleted");
+        }
+        [Authorize]
+        [HttpGet("users-registered-today")]
+        public async Task<IActionResult> GetUsersRegisteredToday()
+        {
+            var count = await _adminService.GetUserCountRegisteredTodayAsync();
+            return Ok(new { count });
         }
     }
 }

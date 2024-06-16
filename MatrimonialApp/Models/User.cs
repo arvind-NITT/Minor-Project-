@@ -22,7 +22,7 @@ namespace MatrimonialApp.Models
         [Required(ErrorMessage = "Date of birth is required.")]
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
-
+        
         [Required(ErrorMessage = "Email address is required.")]
         [EmailAddress(ErrorMessage = "Invalid email address format.")]
         [RegularExpression(@"^[a-zA-Z0-9_.+-]+@gmail\.com$", ErrorMessage = "Email must be a Gmail address.")]

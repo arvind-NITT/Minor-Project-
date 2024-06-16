@@ -46,7 +46,7 @@ namespace MatrimonialUnitTest
 
             // Assert
             Assert.NotNull(result);
-            Assert.AreEqual(2, result.Count());
+            Assert.AreEqual(3, result.Count());
         }
         [Test]
         public async Task GetUserByIdAsync_ShouldReturnUser_WhenUserExists()
@@ -143,17 +143,17 @@ namespace MatrimonialUnitTest
         public async Task DeleteProfileAsync_ShouldRemoveProfile_WhenProfileExists()
         {
             // Arrange
-            var user = new User() { UserId = 103, FirstName = "Arvind2", LastName = "Mali1", Email = "Amali1@gmail.com", DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address = "Mandsaur", ProfilePicture = "", Role = Role.Admin };
+            var user = new User() { UserId = 110, FirstName = "Arvind2", LastName = "Mali1", Email = "Amali1@gmail.com", DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address = "Mandsaur", ProfilePicture = "", Role = Role.Admin };
             await matrimonialContext.Users.AddAsync(user);
             await matrimonialContext.SaveChangesAsync();
-            var profile = new Profile() { ProfileID = 105, UserID = 103, MaritalStatus = MaritalStatus.Married, Gender = "Male", Height = 102, Education = "MCA", Income = 950000, Religion = "Hindu", Caste = "Mali", MotherTongue = "Hindi", Interests = "Sports", PartnerExpectations = "Nothing" };
+            var profile = new Profile() { ProfileID = 105, UserID = 110, MaritalStatus = MaritalStatus.Married, Gender = "Male", Height = 102, Education = "MCA", Income = 950000, Religion = "Hindu", Caste = "Mali", MotherTongue = "Hindi", Interests = "Sports", PartnerExpectations = "Nothing" };
 
             await matrimonialContext.Profiles.AddAsync(profile);
             await matrimonialContext.SaveChangesAsync();
 
             // Act
             await _adminService.DeleteProfileAsync(105);
-            await _adminService.DeleteUserAsync(103);
+            //await _adminService.DeleteUserAsync(103);
             var result = await matrimonialContext.Profiles.FindAsync(105);
 
             // Assert

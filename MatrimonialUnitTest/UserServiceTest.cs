@@ -68,6 +68,18 @@ namespace MatrimonialUnitTest
                 };
           
             var result = _userService.Register(newuser);
+            UserDTO newuser1 = new UserDTO {
+                    FirstName = "sunita",
+                    LastName = "Mali",
+                    DateOfBirth =new  DateTime(2001,01,05),
+                    Email = "g@gmail.com",
+                    PhoneNumber = "1234567890",
+                    Address = "emerald 65",
+                    ProfilePicture = "string",
+                    Password= "123456"
+                };
+          
+            var result1 = _userService.Register(newuser1);
             Assert.IsNotNull(result);
         }
         [Test]
@@ -76,7 +88,7 @@ namespace MatrimonialUnitTest
 
             UserLoginDTO userLoginDTO = new UserLoginDTO
             {
-                UserId = 106,
+                Email = "s@gmail.com",
                 Password = "123456"
             };
              var result = _userService.Login(userLoginDTO);

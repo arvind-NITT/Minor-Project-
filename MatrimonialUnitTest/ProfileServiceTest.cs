@@ -43,9 +43,24 @@ namespace MatrimonialUnitTest
         [Test]
         public async Task CreateProfileTest()
         {
+            var userid = 101;
+
+            //UserDTO newuser = new UserDTO
+            //{
+            //    FirstName = "sunita",
+            //    LastName = "Mali",
+            //    DateOfBirth = new DateTime(2001, 01, 05),
+            //    Email = "s@gmail.com",
+            //    PhoneNumber = "1234567890",
+            //    Address = "emerald 65",
+            //    ProfilePicture = "string",
+            //    Password = "123456"
+            //};
+
+            //var result =  matrimonialContext.Users.Add(newuser);
+            
             var newProfile = new ProfileDTO
             {
-               
                 Gender = "Female",
                 MaritalStatus =0,
                 Height = 165,
@@ -57,7 +72,6 @@ namespace MatrimonialUnitTest
                 Interests = "Reading, Traveling",
                 PartnerExpectations = "Well-educated, Respectful"
             };
-            var userid = 108;
             var result = await _ProfileService.AddMyProfile(userid, newProfile);
             Assert.IsNotNull(result);
             //Assert.AreEqual(userid, result.UserId);
@@ -65,41 +79,16 @@ namespace MatrimonialUnitTest
         [Test]
         public async Task GetMyProfileTest()
         {
-            var userid = 108;
+            var userid = 102;
             var ans = await _ProfileService.GetMyProfile(userid);
             Assert.IsNotNull(ans);
             //Assert.AreEqual(profile.UserId, result.UserId);
         }
-
-        [Test]
-        public async Task DeleteMyProfileTest()
-        {
-            var newProfile = new ProfileDTO
-            {
-
-                Gender = "Female",
-                MaritalStatus = 0,
-                Height = 165,
-                Education = "Bachelor's",
-                Income = 123456789,
-                Religion = "Hindu",
-                Caste = "General",
-                MotherTongue = "Hindi",
-                Interests = "Reading, Traveling",
-                PartnerExpectations = "Well-educated, Respectful"
-            };
-            var userid = 109;
-            var result = await _ProfileService.AddMyProfile(userid, newProfile);
-
-            var ans = await _ProfileService.DeleteMyProfile(userid);
-            Assert.IsNotNull(ans);
-            Assert.AreEqual(userid, ans.UserID);
-        }
         [Test]
         public async Task UpdateMyProfileTest()
         {
-          
-            int userid = 108;
+
+            int userid = 102;
 
             var updatedProfileDTO = new ProfileDTO
             {
@@ -120,5 +109,30 @@ namespace MatrimonialUnitTest
             Assert.AreEqual(updatedProfileDTO.MaritalStatus, ans.MaritalStatus);
             Assert.AreEqual(updatedProfileDTO.Education, ans.Education);
         }
+        [Test]
+        public async Task DeleteMyProfileTest()
+        {
+            var newProfile = new ProfileDTO
+            {
+
+                Gender = "Female",
+                MaritalStatus = 0,
+                Height = 165,
+                Education = "Bachelor's",
+                Income = 123456789,
+                Religion = "Hindu",
+                Caste = "General",
+                MotherTongue = "Hindi",
+                Interests = "Reading, Traveling",
+                PartnerExpectations = "Well-educated, Respectful"
+            };
+            var userid = 101;
+            var result = await _ProfileService.AddMyProfile(userid, newProfile);
+
+            var ans = await _ProfileService.DeleteMyProfile(userid);
+            Assert.IsNotNull(ans);
+            Assert.AreEqual(userid, ans.UserID);
+        }
+       
     }
 }

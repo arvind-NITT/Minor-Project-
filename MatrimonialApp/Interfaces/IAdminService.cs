@@ -16,5 +16,6 @@ namespace MatrimonialApp.Interfaces
         Task<Subscription> GetSubscriptionByIdAsync(int subscriptionId);
         Task UpdateSubscriptionAsync(Subscription subscription);
         Task DeleteSubscriptionAsync(int subscriptionId);
+        Task<int> GetUserCountRegisteredTodayAsync();
     }
 }

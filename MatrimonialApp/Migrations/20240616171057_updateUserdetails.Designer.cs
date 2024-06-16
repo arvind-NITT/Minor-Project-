@@ -4,6 +4,7 @@ using MatrimonialApp.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MatrimonialApp.Migrations
 {
     [DbContext(typeof(MatrimonialContext))]
-    partial class MatrimonialContextModelSnapshot : ModelSnapshot
+    [Migration("20240616171057_updateUserdetails")]
+    partial class updateUserdetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

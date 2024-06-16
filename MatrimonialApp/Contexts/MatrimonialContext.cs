@@ -21,7 +21,9 @@ namespace MatrimonialApp.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            modelBuilder.Entity<User>()
+              .HasIndex(u => u.Email)
+              .IsUnique();
             modelBuilder.Entity<Profile>(entity =>
             {
                 entity.HasKey(e => e.ProfileID);
@@ -40,10 +42,10 @@ namespace MatrimonialApp.Contexts
             modelBuilder.Entity<Subscription>()
               .Property(s => s.Type)
               .HasDefaultValue(SubscriptionType.Basic); // Set your default value here
-            modelBuilder.Entity<User>().HasData(
-                new User() { UserId = 101, FirstName = "Arvind", LastName = "Mali", Email = "Amali@gmail.com",  DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address="Chandwasa", ProfilePicture = "",Role=Role.Admin },
-                new User() { UserId = 102, FirstName = "Arvind1", LastName = "Mali1", Email = "Amali1@gmail.com",  DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address="Mandsaur", ProfilePicture = "",Role = Role.Admin }
-                );
+            //modelBuilder.Entity<User>().HasData(
+            //    new User() { UserId = 101, FirstName = "Arvind", LastName = "Mali", Email = "Amali@gmail.com",  DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address="Chandwasa", ProfilePicture = "",Role=Role.Admin },
+            //    new User() { UserId = 102, FirstName = "Arvind1", LastName = "Mali1", Email = "Amali1@gmail.com",  DateOfBirth = new DateTime(2000, 2, 12), PhoneNumber = "9876543321", Address="Mandsaur", ProfilePicture = "",Role = Role.Admin }
+            //    );
             //modelBuilder.Entity<Match>().HasData(
             //    new Match() { MatchID = 101, UserID1 = 101, UserID2 = 105, MatchStatus = MatchStatus.Pending, MatchDate = new DateTime(2023, 2, 12) }
             //    ); 

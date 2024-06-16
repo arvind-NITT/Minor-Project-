@@ -31,7 +31,10 @@ namespace MatrimonialApp.Repositories
             }
             throw new Exception("No UserDetail with the given ID");
         }
-
+        //public async Task<UserDetail> GetByEmailAsync(string email)
+        //{
+        //    return await _context.UserDetails.FirstOrDefaultAsync(u => u.email == email);
+        //}
         public async Task<UserDetail> Get(int key)
         {
             return (await _context.UserDetails.SingleOrDefaultAsync(u => u.UserId == key)) ?? throw new Exception("No UserDetail with the given ID");

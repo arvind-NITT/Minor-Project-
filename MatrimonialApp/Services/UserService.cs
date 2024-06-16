@@ -35,7 +35,9 @@ namespace MatrimonialApp.Services
         }
         public async Task<LoginReturnDTO> Login(UserLoginDTO loginDTO)
         {
-            var UserDetailDB = await _UserDetailRepo.Get(loginDTO.UserId);
+            var data=  await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDTO.Email);
+            if (data == null) { throw new UnauthorizedUserException("Invalid UserDetailname or password"); }
+            var UserDetailDB = await _UserDetailRepo.Get(data.UserId);
             if (UserDetailDB == null)
             {
                 throw new UnauthorizedUserException("Invalid UserDetailname or password");
@@ -45,7 +47,7 @@ namespace MatrimonialApp.Services
             bool isPasswordSame = ComparePassword(encrypterPass, UserDetailDB.Password);
             if (isPasswordSame)
             {
-                var User = await _UserRepo.Get(loginDTO.UserId);
+                var User = await _UserRepo.Get(data.UserId);
                 // if(UserDetailDB.Status =="Active")
                 //{
                 LoginReturnDTO loginReturnDTO = MapUserToLoginReturn(User);
@@ -71,6 +73,10 @@ namespace MatrimonialApp.Services
 
         public async Task<User> Register(UserDTO UserDTO)
         {
+            var found = await _context.Users.FirstOrDefaultAsync(p => p.Email == UserDTO.Email);
+            if (found != null) {
+                throw new Exception("User with this Email Already Exist, Kindly Login");
+            }
             User user = null;
             UserDetail UserDetail = null;
             try
@@ -143,6 +149,7 @@ namespace MatrimonialApp.Services
         {
             UserDetail UserDetail = new UserDetail();
             UserDetail.UserId = UserDTO.UserId;
+            UserDetail.RegistrationDate= DateTime.Now;
             UserDetail.Status = "Disabled";
             HMACSHA512 hMACSHA = new HMACSHA512();
             UserDetail.PasswordHashKey = hMACSHA.Key;
@@ -207,7 +214,7 @@ namespace MatrimonialApp.Services
            .ToListAsync();
             var matches = await _context.Users
               .Join(_context.Profiles, u => u.UserId, p => p.UserID, (u, p) => new { User = u, Profile = p })
-              .Where(up => (up.User.UserId != UserId && !requestedUserIds.Contains(up.User.UserId)) &&
+              .Where(up => (up.User.UserId != UserId && !requestedUserIds.Contains(up.User.UserId) && up.User.Role != Role.Admin) &&
                           ( up.Profile.Gender.ToLower() == matchDTO.Looking_for.ToLower() ||
                            (string.IsNullOrEmpty(matchDTO.Religion) || up.Profile.Religion.ToLower() == matchDTO.Religion.ToLower()) ||
                            (string.IsNullOrEmpty(matchDTO.MotherTongue) || up.Profile.MotherTongue.ToLower()  == matchDTO.MotherTongue.ToLower()) ||

@@ -21,7 +21,7 @@ namespace MatrimonialApp.Controllers
             _logger = logger;
         }
         [Authorize]
-        [HttpGet("GetProfile/{userId}")]
+        [HttpGet("GetProfile")]
         [ProducesResponseType(typeof(Profile), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Profile>> GetProfile()
@@ -57,6 +57,7 @@ namespace MatrimonialApp.Controllers
             }
 
             int userId = int.Parse(userIdClaim.Value);
+
             try
             {
                 var addedProfile = await _profileService.AddMyProfile(userId,profile);

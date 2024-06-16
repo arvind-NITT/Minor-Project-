@@ -30,12 +30,46 @@ namespace MatrimonialApp.Services
 
         public async Task DeleteUserAsync(int userId)
         {
-            var user = await _context.Users.FindAsync(userId);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
-            }
+            //using (var transaction = await _context.Database.BeginTransactionAsync())
+            //{
+                try
+                {
+                    var user = await _context.Users.FindAsync(userId);
+                    if (user == null)
+                    {
+                        throw new Exception("User not found.");
+                    }
+
+                    var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserID == userId);
+                    var subscriptions = await _context.Subscriptions.Where(s => s.UserId == userId).ToListAsync();
+                    var matches = await _context.Matchs.Where(m => m.UserID1 == userId || m.UserID2 == userId).ToListAsync();
+
+                    if (profile != null)
+                    {
+                        _context.Profiles.Remove(profile);
+                    }
+
+                    if (subscriptions.Any())
+                    {
+                        _context.Subscriptions.RemoveRange(subscriptions);
+                    }
+
+                    if (matches.Any())
+                    {
+                        _context.Matchs.RemoveRange(matches);
+                    }
+
+                     _context.Users.Remove(user);
+
+                    await _context.SaveChangesAsync();
+                    //await transaction.CommitAsync();
+                }
+                catch (Exception)
+                {
+                    //await transaction.RollbackAsync();
+                    throw;
+                }
+            
         }
 
         public async Task<IEnumerable<Profile>> GetAllProfilesAsync()
@@ -88,6 +122,13 @@ namespace MatrimonialApp.Services
                 _context.Subscriptions.Remove(subscription);
                 await _context.SaveChangesAsync();
             }
+        }
+        public async Task<int> GetUserCountRegisteredTodayAsync()
+        {
+            var today = DateTime.UtcNow.Date;
+            return await _context.UserDetails
+                                 .Where(u => u.RegistrationDate.Date == today)
+                                 .CountAsync();
         }
     }
 }

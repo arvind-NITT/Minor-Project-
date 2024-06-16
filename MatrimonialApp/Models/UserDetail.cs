@@ -12,6 +12,7 @@ namespace MatrimonialApp.Models
 
         [ForeignKey("UserId")]
         public User User { get; set; }
+        public DateTime RegistrationDate { get; set; }
 
         public string Status { get; set; }
     }
