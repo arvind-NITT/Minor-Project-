@@ -47,6 +47,33 @@ namespace MatrimonialApp.Migrations
                     b.ToTable("Matchs");
                 });
 
+            modelBuilder.Entity("MatrimonialApp.Models.PricingPlan", b =>
+                {
+                    b.Property<int>("PricingPlanId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PricingPlanId"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("PricingPlanId");
+
+                    b.ToTable("PricingPlans");
+                });
+
             modelBuilder.Entity("MatrimonialApp.Models.Profile", b =>
                 {
                     b.Property<int>("ProfileID")

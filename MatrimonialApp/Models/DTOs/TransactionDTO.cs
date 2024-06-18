@@ -10,7 +10,7 @@ namespace MatrimonialApp.Models.DTOs
         public string UPIID { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string TransactionType { get; set; } // E.g., "Upgrade to Premium"
+        [EnumDataType(typeof(SubscriptionType))]
+        public SubscriptionType Type { get; set; }
     }
 }

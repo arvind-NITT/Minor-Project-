@@ -1,4 +1,5 @@
 ﻿using MatrimonialApp.Models;
+using MatrimonialApp.Models.DTOs;
 
 namespace MatrimonialApp.Interfaces
 {
@@ -17,5 +18,12 @@ namespace MatrimonialApp.Interfaces
         Task UpdateSubscriptionAsync(Subscription subscription);
         Task DeleteSubscriptionAsync(int subscriptionId);
         Task<int> GetUserCountRegisteredTodayAsync();
+        Task<IEnumerable<PricingPlan>> GetAllPricingPlansAsync();
+        Task<PricingPlan> GetPricingPlanByIdAsync(int pricingPlanId);
+        Task AddPricingPlanAsync(PricingPlan pricingPlan);
+        Task UpdatePricingPlanAsync(PriceplansupdateDTO priceplansupdateDTO);
+        Task DeletePricingPlanAsync(int pricingPlanId);
+        Task<decimal> GetTotalEarnings();
+        Task<(int BasicPlanUsers, int PremiumPlanUsers)> GetSubscriptionCountsAsync();
     }
 }

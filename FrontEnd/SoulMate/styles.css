@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    
+}
+
+.Find-your-match{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ /* background-image:url(./Images/ban-bg.jpg); */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ animation: growBackground 4s infinite ease-in forwards;
+ transition: background-image 0.5s ease-in-out;
+}
+@keyframes growBackground {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 120% 120%; /* Adjust as needed */
+    }
+  }
+.home-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+    color: #66451c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+label,
+tr,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+summary,
+input,
+textarea,
+select {
+    font-family: Poppins, sans-serif;
+    color: #66451c;
+}
+h1,
+h1 b,
+h2,
+h2 span {
+    font-family: "Lakki Reddy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+.lakki-reddy-regular {
+    font-family: "Lakki Reddy", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .form-group{
+    width: 213px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2%;
+  }
+.banner-title {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.banner-title h3,h1,span,h5{
+    color: white;
+}
+.banner-findmatch{
+    width: 90%;
+    height: auto;
+    padding: 25px;
+    background-color: black;
+    border-radius: 5px;
+    display: table;
+}
+.banner-findmatch ul li {
+    float: left;
+    width: 19%;
+    padding: 0px 5px;
+    margin: 0px 2px;
+    display: inline-flex;
+}

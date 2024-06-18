@@ -17,6 +17,7 @@ namespace MatrimonialUnitTest
     {
         private  MatrimonialContext matrimonialContext;
         private  IAdminService _adminService;
+        private  IRepository<int, PricingPlan> _pricingPlanRepo;
         public AdminServiceTests()
         {}
         [SetUp]
@@ -25,8 +26,8 @@ namespace MatrimonialUnitTest
             DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder()
                                                         .UseInMemoryDatabase("dummyDB");
             matrimonialContext = new MatrimonialContext(optionsBuilder.Options);
-
-            _adminService = new AdminService(matrimonialContext);
+           
+            _adminService = new AdminService(matrimonialContext, _pricingPlanRepo);
         }
         [Test]
         public async Task GetAllUsersAsync_ShouldReturnAllUsers()

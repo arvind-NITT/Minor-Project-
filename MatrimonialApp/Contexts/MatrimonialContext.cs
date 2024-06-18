@@ -17,7 +17,7 @@ namespace MatrimonialApp.Contexts
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<UserDetail> UserDetails { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-
+        public DbSet<PricingPlan> PricingPlans { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

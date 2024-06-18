@@ -64,6 +64,8 @@ namespace MatrimonialApp
             builder.Services.AddScoped<IRepository<int, Profile>, ProfileRepository>();
             builder.Services.AddScoped<IRepository<int, Subscription>, SubscriptionRepository>();
             builder.Services.AddScoped<IRepository<int, Transaction>, TransactionRepository>();
+            builder.Services.AddScoped<IRepository<int, PricingPlan>, PricingPlanRepository>();
+            //builder.Services.AddScoped<IRepository<int, PricingPlan>, PricingPlanRepository>();
             #endregion
 
             #region services

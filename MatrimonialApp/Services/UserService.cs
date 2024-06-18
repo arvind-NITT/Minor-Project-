@@ -217,8 +217,7 @@ namespace MatrimonialApp.Services
               .Where(up => (up.User.UserId != UserId && !requestedUserIds.Contains(up.User.UserId) && up.User.Role != Role.Admin) &&
                           ( up.Profile.Gender.ToLower() == matchDTO.Looking_for.ToLower() ||
                            (string.IsNullOrEmpty(matchDTO.Religion) || up.Profile.Religion.ToLower() == matchDTO.Religion.ToLower()) ||
-                           (string.IsNullOrEmpty(matchDTO.MotherTongue) || up.Profile.MotherTongue.ToLower()  == matchDTO.MotherTongue.ToLower()) ||
-                           (matchDTO.MaritalStatus == null || up.Profile.MaritalStatus == matchDTO.MaritalStatus)) )
+                           (string.IsNullOrEmpty(matchDTO.MotherTongue) || up.Profile.MotherTongue.ToLower()  == matchDTO.MotherTongue.ToLower())))
               .ToListAsync();
 
             var result = matches
@@ -272,26 +271,26 @@ namespace MatrimonialApp.Services
 
             if (!string.IsNullOrEmpty(matchDTO.Religion) && profile.Religion.ToLower() == matchDTO.Religion.ToLower())
             {
-                score= score + 20;
+                score= score + 25;
             }
 
             if (!string.IsNullOrEmpty(matchDTO.MotherTongue) && profile.MotherTongue.ToLower() == matchDTO.MotherTongue.ToLower())
             {
-                score = score + 20;
+                score = score + 25;
             }
 
-            if (matchDTO.MaritalStatus != null && profile.MaritalStatus == matchDTO.MaritalStatus)
-            {
-                score = score + 20;
-            }
+            //if (matchDTO.MaritalStatus != null && profile.MaritalStatus == matchDTO.MaritalStatus)
+            //{
+            //    score = score + 20;
+            //}
             if  (matchDTO.Looking_for != null && profile.Gender.ToLower() == matchDTO.Looking_for.ToLower())
             {
-                score = score + 20;
+                score = score + 25;
             }
             
             if (ageDifference <= 2)
             {
-                score += 20; // Adjust the score value as needed
+                score += 25; // Adjust the score value as needed
             }
 
             // Add more criteria as needed...

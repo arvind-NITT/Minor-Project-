@@ -110,8 +110,7 @@ namespace MatrimonialUnitTest
                 Looking_for = "Male",
                 Age = 23,
                 Religion = "Muslim",
-                MotherTongue = "hindi",
-                MaritalStatus = 0
+                MotherTongue = "hindi"
             };
             var result = _userService.FindMyMatch(UserId,matchDTO);
             Assert.IsNotNull(result);

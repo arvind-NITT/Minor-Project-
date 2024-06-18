@@ -1,5 +1,6 @@
 ﻿using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
+using MatrimonialApp.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -126,6 +127,60 @@ namespace MatrimonialApp.Controllers
         {
             var count = await _adminService.GetUserCountRegisteredTodayAsync();
             return Ok(new { count });
+        }
+        [Authorize]
+        [HttpGet("pricing-plans")]
+        public async Task<IActionResult> GetAllPricingPlans()
+        {
+            var plans = await _adminService.GetAllPricingPlansAsync();
+            return Ok(plans);
+        }
+        [Authorize]
+        [HttpGet("pricing-plan/{id}")]
+        public async Task<IActionResult> GetPricingPlanById(int id)
+        {
+            var plan = await _adminService.GetPricingPlanByIdAsync(id);
+            if (plan == null)
+            {
+                return NotFound("Pricing plan not found.");
+            }
+            return Ok(plan);
+        }
+        [Authorize]
+        [HttpPost("add-pricing-plan")]
+        public async Task<IActionResult> AddPricingPlan([FromBody] PricingPlan pricingPlan)
+        {
+            await _adminService.AddPricingPlanAsync(pricingPlan);
+            return Ok("Pricing plan added successfully.");
+        }
+        [Authorize]
+        [HttpPut("update-pricing-plan")]
+        public async Task<IActionResult> UpdatePricingPlan(PriceplansupdateDTO priceplansupdateDTO)
+        {
+            await _adminService.UpdatePricingPlanAsync(priceplansupdateDTO);
+            return Ok("Pricing plan updated successfully.");
+        }
+        [Authorize]
+        [HttpDelete("delete-pricing-plan/{id}")]
+        public async Task<IActionResult> DeletePricingPlan(int id)
+        {
+            await _adminService.DeletePricingPlanAsync(id);
+            return Ok("Pricing plan deleted successfully.");
+        }
+        [Authorize]
+        [HttpGet("total-earnings")]
+        public async Task<IActionResult> GetTotalEarnings()
+        {
+            var totalEarnings = await _adminService.GetTotalEarnings();
+            return Ok(totalEarnings);
+        }
+        [Authorize]
+        [HttpGet("subscription-counts")]
+        public async Task<IActionResult> GetSubscriptionCounts()
+        {
+            var subscriptionCounts = await _adminService.GetSubscriptionCountsAsync();
+            Console.WriteLine(subscriptionCounts);
+            return Ok(subscriptionCounts.ToTuple());
         }
     }
 }

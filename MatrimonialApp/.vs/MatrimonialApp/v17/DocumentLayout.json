@@ -3,73 +3,79 @@
   "WorkspaceRootPath": "C:\\Minor Project\\MatrimonialApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\adminservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\profileservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\matchservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\tokenservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616171057_updateUserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240616171057_updateUserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\pricingplanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\pricingplanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchinsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchinsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\pricingplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\pricingplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\profileservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\contexts\\matrimonialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:contexts\\matrimonialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\adminservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\priceplansupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\priceplansupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\userdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -80,22 +86,56 @@
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\transactionservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\tokenservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\contexts\\matrimonialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:contexts\\matrimonialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616193127_priceplansadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240616193127_priceplansadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,31 +150,12 @@
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\subscriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\matchservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\interfaces\\imatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:interfaces\\imatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchinsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchinsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4F1E29C-BC3B-4009-AE5B-AC64500C488C}|..\\MatrimonialUnitTest\\MatrimonialUnitTest.csproj|c:\\minor project\\matrimonialunittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -144,32 +165,12 @@
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\models\\dtos\\matchupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:models\\dtos\\matchupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\migrations\\20240530211959_allmodelsadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,6 +187,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\migrations\\20240611092501_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:migrations\\20240611092501_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|c:\\minor project\\matrimonialapp\\migrations\\20240616171057_updateuserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE1DBBC-5D3F-420B-8211-A83888FC74BB}|MatrimonialApp.csproj|solutionrelative:migrations\\20240616171057_updateuserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -195,17 +200,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
               "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwA4AAAABAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAOYAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T19:17:39.137Z",
               "IsPinned": true,
@@ -213,26 +218,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "SubscriptionService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\SubscriptionService.cs",
               "RelativeDocumentMoniker": "Services\\SubscriptionService.cs",
               "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\SubscriptionService.cs",
               "RelativeToolTip": "Services\\SubscriptionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T10:56:09.074Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\TransactionService.cs",
               "RelativeDocumentMoniker": "Services\\TransactionService.cs",
               "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\TransactionService.cs",
               "RelativeToolTip": "Services\\TransactionService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAwwDsAAABHAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T11:24:20.63Z",
               "IsPinned": true,
@@ -240,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "ProfileService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\ProfileService.cs",
               "RelativeDocumentMoniker": "Services\\ProfileService.cs",
@@ -249,88 +255,85 @@
               "ViewState": "AQIAADAAAAAAAAAAAAAowB0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T11:25:52.826Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "TransactionRepository.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\TransactionRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\TransactionRepository.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\TransactionRepository.cs",
-              "RelativeToolTip": "Repositories\\TransactionRepository.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwDAAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:15:56.322Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Subscription.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\Subscription.cs",
-              "RelativeDocumentMoniker": "Models\\Subscription.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\Subscription.cs",
-              "RelativeToolTip": "Models\\Subscription.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T09:23:29.574Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\Transaction.cs",
-              "RelativeDocumentMoniker": "Models\\Transaction.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\Transaction.cs",
-              "RelativeToolTip": "Models\\Transaction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T10:47:20.661Z",
+              "WhenOpened": "2024-05-29T11:15:42.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T21:05:41.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AdminService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\AdminService.cs",
               "RelativeDocumentMoniker": "Services\\AdminService.cs",
               "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\AdminService.cs",
               "RelativeToolTip": "Services\\AdminService.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAswH0AAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T11:46:16.601Z",
+              "WhenOpened": "2024-06-16T20:43:22.514Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfileServiceTest.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\ProfileServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\ProfileServiceTest.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\ProfileServiceTest.cs",
+              "RelativeToolTip": "..\\MatrimonialUnitTest\\ProfileServiceTest.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAACAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:38:21.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T05:13:13.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminServiceTests.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\AdminServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\AdminServiceTests.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\AdminServiceTests.cs",
+              "RelativeToolTip": "..\\MatrimonialUnitTest\\AdminServiceTests.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:43:28.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "20240616171057_updateUserdetails.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616171057_updateUserdetails.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240616171057_updateUserdetails.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616171057_updateUserdetails.cs",
-              "RelativeToolTip": "Migrations\\20240616171057_updateUserdetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "MatchServiceTest.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\MatchServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\MatchServiceTest.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\MatchServiceTest.cs",
+              "RelativeToolTip": "..\\MatrimonialUnitTest\\MatchServiceTest.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAqwBQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T17:10:57.974Z",
+              "WhenOpened": "2024-05-30T09:15:50.609Z",
               "EditorCaption": ""
             },
             {
@@ -341,7 +344,7 @@
               "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\UserServiceTest.cs",
               "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\UserServiceTest.cs",
               "RelativeToolTip": "..\\MatrimonialUnitTest\\UserServiceTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T04:20:07.105Z",
               "EditorCaption": ""
@@ -349,19 +352,265 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IAdminService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IAdminService.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IAdminService.cs",
-              "RelativeToolTip": "Interfaces\\IAdminService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Title": "TokenServiceTest.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\TokenServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\TokenServiceTest.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\TokenServiceTest.cs",
+              "RelativeToolTip": "..\\MatrimonialUnitTest\\TokenServiceTest.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T11:43:25.85Z",
+              "WhenOpened": "2024-05-30T09:48:26.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "MatchService.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\MatchService.cs",
+              "RelativeDocumentMoniker": "Services\\MatchService.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\MatchService.cs",
+              "RelativeToolTip": "Services\\MatchService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBcAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:46:09.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\Subscription.cs",
+              "RelativeDocumentMoniker": "Models\\Subscription.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\Subscription.cs",
+              "RelativeToolTip": "Models\\Subscription.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAADgvx8AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T09:23:29.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PricingPlanRepository.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\PricingPlanRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\PricingPlanRepository.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\PricingPlanRepository.cs",
+              "RelativeToolTip": "Repositories\\PricingPlanRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:23:43.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MatchUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchUpdateDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\MatchUpdateDTO.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchUpdateDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\MatchUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T19:03:44.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MatchInsertDTO.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchInsertDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\MatchInsertDTO.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchInsertDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\MatchInsertDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:36:47.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MatchDTO.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\MatchDTO.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\MatchDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T09:39:03.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PricingPlan.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\PricingPlan.cs",
+              "RelativeDocumentMoniker": "Models\\PricingPlan.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\PricingPlan.cs",
+              "RelativeToolTip": "Models\\PricingPlan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T18:07:43.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IAdminService.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IAdminService.cs",
+              "RelativeToolTip": "Interfaces\\IAdminService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAIA8wB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T05:13:58.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SubscriptionRepository.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\SubscriptionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SubscriptionRepository.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\SubscriptionRepository.cs",
+              "RelativeToolTip": "Repositories\\SubscriptionRepository.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAuwEwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:11:53.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PriceplansupdateDTO.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\PriceplansupdateDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\PriceplansupdateDTO.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\PriceplansupdateDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\PriceplansupdateDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T04:16:37.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserDetailRepository.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\UserDetailRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserDetailRepository.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\UserDetailRepository.cs",
+              "RelativeToolTip": "Repositories\\UserDetailRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T04:53:07.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MatchRepository.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\MatchRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\MatchRepository.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\MatchRepository.cs",
+              "RelativeToolTip": "Repositories\\MatchRepository.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAuwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:48:13.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProfileRepository.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\ProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\ProfileRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwD4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T09:56:57.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "Models\\Transaction.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\Transaction.cs",
+              "RelativeToolTip": "Models\\Transaction.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T10:47:20.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:08:09.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MatrimonialContext.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Contexts\\MatrimonialContext.cs",
+              "RelativeDocumentMoniker": "Contexts\\MatrimonialContext.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Contexts\\MatrimonialContext.cs",
+              "RelativeToolTip": "Contexts\\MatrimonialContext.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAYwBMAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T20:47:51.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20240616193127_priceplansadded.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616193127_priceplansadded.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240616193127_priceplansadded.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616193127_priceplansadded.cs",
+              "RelativeToolTip": "Migrations\\20240616193127_priceplansadded.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T19:31:28.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MatchController.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\MatchController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MatchController.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Controllers\\MatchController.cs",
+              "RelativeToolTip": "Controllers\\MatchController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:38:16.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20240616171057_updateUserdetails.cs",
+              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616171057_updateUserdetails.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240616171057_updateUserdetails.cs",
+              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Migrations\\20240616171057_updateUserdetails.cs",
+              "RelativeToolTip": "Migrations\\20240616171057_updateUserdetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T17:10:57.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "IProfileService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IProfileService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IProfileService.cs",
@@ -369,38 +618,11 @@
               "RelativeToolTip": "Interfaces\\IProfileService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:25:42.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T11:25:42.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProfileServiceTest.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\ProfileServiceTest.cs",
-              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\ProfileServiceTest.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\ProfileServiceTest.cs",
-              "RelativeToolTip": "..\\MatrimonialUnitTest\\ProfileServiceTest.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAqwFoAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:38:21.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MatrimonialContext.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Contexts\\MatrimonialContext.cs",
-              "RelativeDocumentMoniker": "Contexts\\MatrimonialContext.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Contexts\\MatrimonialContext.cs",
-              "RelativeToolTip": "Contexts\\MatrimonialContext.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDAAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:47:51.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 31,
               "Title": "UserDetail.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\UserDetail.cs",
               "RelativeDocumentMoniker": "Models\\UserDetail.cs",
@@ -408,37 +630,11 @@
               "RelativeToolTip": "Models\\UserDetail.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T17:03:34.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T17:03:34.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdminServiceTests.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\AdminServiceTests.cs",
-              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\AdminServiceTests.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\AdminServiceTests.cs",
-              "RelativeToolTip": "..\\MatrimonialUnitTest\\AdminServiceTests.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T04:43:28.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProfileRepository.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\ProfileRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProfileRepository.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\ProfileRepository.cs",
-              "RelativeToolTip": "Repositories\\ProfileRepository.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowCAAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T09:56:57.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 32,
               "Title": "UserLoginDTO.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\UserLoginDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\UserLoginDTO.cs",
@@ -450,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 33,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -462,31 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserDetailRepository.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\UserDetailRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserDetailRepository.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\UserDetailRepository.cs",
-              "RelativeToolTip": "Repositories\\UserDetailRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA5wB8AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T04:53:07.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MatchRepository.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\MatchRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\MatchRepository.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\MatchRepository.cs",
-              "RelativeToolTip": "Repositories\\MatchRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBYAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:48:13.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 34,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
@@ -510,43 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MatchService.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\MatchService.cs",
-              "RelativeDocumentMoniker": "Services\\MatchService.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\MatchService.cs",
-              "RelativeToolTip": "Services\\MatchService.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAmwIcAAADMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:46:09.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TransactionServiceTest.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\TransactionServiceTest.cs",
-              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\TransactionServiceTest.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\TransactionServiceTest.cs",
-              "RelativeToolTip": "..\\MatrimonialUnitTest\\TransactionServiceTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T08:58:42.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TokenServiceTest.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\TokenServiceTest.cs",
-              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\TokenServiceTest.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\TokenServiceTest.cs",
-              "RelativeToolTip": "..\\MatrimonialUnitTest\\TokenServiceTest.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:48:26.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 35,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -558,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 36,
               "Title": "TransactionController.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\TransactionController.cs",
               "RelativeDocumentMoniker": "Controllers\\TransactionController.cs",
@@ -570,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 37,
               "Title": "SubscriptionController.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\SubscriptionController.cs",
               "RelativeDocumentMoniker": "Controllers\\SubscriptionController.cs",
@@ -582,19 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "SubscriptionRepository.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Repositories\\SubscriptionRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\SubscriptionRepository.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Repositories\\SubscriptionRepository.cs",
-              "RelativeToolTip": "Repositories\\SubscriptionRepository.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAApwDcAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:11:53.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "ITransactionService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\ITransactionService.cs",
               "RelativeDocumentMoniker": "Interfaces\\ITransactionService.cs",
@@ -602,23 +726,12 @@
               "RelativeToolTip": "Interfaces\\ITransactionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:22:50.284Z"
+              "WhenOpened": "2024-05-30T11:22:50.284Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "MatchServiceTest.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\MatchServiceTest.cs",
-              "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\MatchServiceTest.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialUnitTest\\MatchServiceTest.cs",
-              "RelativeToolTip": "..\\MatrimonialUnitTest\\MatchServiceTest.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAuwN4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:15:50.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "IMatchService.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Interfaces\\IMatchService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IMatchService.cs",
@@ -630,31 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MatchInsertDTO.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchInsertDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\MatchInsertDTO.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchInsertDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\MatchInsertDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T04:36:47.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "TransactionDTO.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\TransactionDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\TransactionDTO.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\TransactionDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\TransactionDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:25:17.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialUnitTest\\UnitTest1.cs",
               "RelativeDocumentMoniker": "..\\MatrimonialUnitTest\\UnitTest1.cs",
@@ -666,7 +755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "LoginReturnDTO.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\LoginReturnDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\LoginReturnDTO.cs",
@@ -675,18 +764,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T21:26:04.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAgwBsAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:15:42.181Z"
             },
             {
               "$type": "Document",
@@ -702,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "MatchReturnDTO.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchReturnDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\MatchReturnDTO.cs",
@@ -714,31 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "MatchUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchUpdateDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\MatchUpdateDTO.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchUpdateDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\MatchUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T19:03:44.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "MatchDTO.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\MatchDTO.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\MatchDTO.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T09:39:03.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "MatchDetailsDTO.cs",
               "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Models\\DTOs\\MatchDetailsDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\MatchDetailsDTO.cs",
@@ -759,30 +812,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T06:13:06.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Services\\TokenService.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Services\\TokenService.cs",
-              "RelativeToolTip": "Services\\TokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:08:09.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MatchController.cs",
-              "DocumentMoniker": "C:\\Minor Project\\MatrimonialApp\\Controllers\\MatchController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MatchController.cs",
-              "ToolTip": "C:\\Minor Project\\MatrimonialApp\\Controllers\\MatchController.cs",
-              "RelativeToolTip": "Controllers\\MatchController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCkAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:38:16.574Z"
             },
             {
               "$type": "Document",

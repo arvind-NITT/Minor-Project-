@@ -1,4 +1,5 @@
-﻿using MatrimonialApp.Interfaces;
+﻿using MatrimonialApp.Contexts;
+using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -7,21 +8,26 @@ namespace MatrimonialApp.Services
 {
     public class TransactionService : ITransactionService
     {
+        private readonly MatrimonialContext _context;
         private readonly IRepository<int, Transaction> _transactionRepository;
 
-        public TransactionService(IRepository<int, Transaction> transactionRepository)
+        public TransactionService(MatrimonialContext context,IRepository<int, Transaction> transactionRepository)
         {
+            _context = context;
             _transactionRepository = transactionRepository;
         }
 
         public async Task<Transaction> CreateTransaction(int userId, TransactionDTO transactionDTO)
         {
+             var pricedetails = await _context.PricingPlans.FirstOrDefaultAsync(p=> p.Type == transactionDTO.Type);
+            if (pricedetails == null) { throw new Exception("Invalid Type"); }
+            Console.WriteLine(pricedetails.Type);
             var transaction = new Transaction
             {
                 UserId = userId,
-                Amount = 299,
+                Amount = pricedetails.Price,
                 TransactionDate = DateTime.Now,
-                TransactionType= transactionDTO.TransactionType,
+                TransactionType= "Upgrade",
                 IsApproved=false,
                 UPIID= transactionDTO.UPIID,
             };

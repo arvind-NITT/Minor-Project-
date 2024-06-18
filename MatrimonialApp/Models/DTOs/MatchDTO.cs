@@ -3,13 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MainRequestTrackerAPI.Models.DTOs
 {
-    //public enum MaritalStatus
-    //{
-    //    Single,
-    //    Married,
-    //    Divorced,
-    //    Widowed
-    //}
+   
     public class MatchDTO
     {
         //public int UserId { get; set; }
@@ -27,7 +21,5 @@ namespace MainRequestTrackerAPI.Models.DTOs
         [Required(ErrorMessage = "Mother tongue is required.")]
         public string MotherTongue { get; set; }
 
-        [EnumDataType(typeof(MaritalStatus), ErrorMessage = "Invalid MatchStatus value.")]
-        public MaritalStatus MaritalStatus { get; set; } 
     }
 }
