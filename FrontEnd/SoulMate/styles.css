@@ -5,49 +5,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    border: 0px;
-    font-style: inherit;
-    font-variant: inherit;
-    font-weight: inherit;
-    font-stretch: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    vertical-align: baseline;
-    font-family: Poppins, sans-serif;
-    font-weight: 400;
-    
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 0px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+
 }
 
-.Find-your-match{
- width: 100%;
- height: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- min-height: 100vh;
- /* background-image:url(./Images/ban-bg.jpg); */
- background-position: center;
- background-repeat: no-repeat;
- background-size: 100% 100%;
- animation: growBackground 4s infinite ease-in forwards;
- transition: background-image 0.5s ease-in-out;
+.Find-your-match {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-image:url(./Images/ban-bg.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: growBackground 4s infinite ease-in forwards;
+  transition: background-image 0.5s ease-in-out;
 }
+
 @keyframes growBackground {
-    0% {
-      background-size: 100% 100%;
-    }
-    100% {
-      background-size: 120% 120%; /* Adjust as needed */
-    }
+  0% {
+    background-size: 100% 100%;
   }
-.home-banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+  100% {
+    background-size: 120% 120%;
+    /* Adjust as needed */
+  }
+}
+
+.home-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1,
@@ -56,8 +60,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0px;
-    color: #66451c;
+  margin-top: 0px;
+  color: #66451c;
 }
 
 h1,
@@ -89,65 +93,427 @@ summary,
 input,
 textarea,
 select {
-    font-family: Poppins, sans-serif;
-    color: #66451c;
+  font-family: Poppins, sans-serif;
+  color: #66451c;
 }
+
 h1,
 h1 b,
 h2,
 h2 span {
-    font-family: "Lakki Reddy", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Lakki Reddy", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 ul {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
+
 .lakki-reddy-regular {
-    font-family: "Lakki Reddy", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .form-group{
-    width: 213px;
-    height: 48px;
+  font-family: "Lakki Reddy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form-group {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2%;
+  flex-wrap: wrap;
+  /* margin: 5px 0; Adjust spacing between form groups */
+}
+
+.banner-title {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.banner-title h3,
+h1,
+span,
+h5 {
+  color: white;
+}
+
+.banner-findmatch {
+  width: 90%;
+  height: auto;
+  padding: 25px;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: inherit;
+  font-size: 90%;
+}
+
+.banner-findmatch ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.banner-findmatch ul li {
+  float: left;
+  width: 19%;
+  padding: 0px 5px;
+  margin: 0px 2px;
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .banner-findmatch {
+    padding: 25px;
+
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    border-radius: 2%;
+    flex-grow: inherit;
   }
-.banner-title {
-    text-align: center;
-    width: 100%;
-    position: relative;
-}
-.banner-title h3,h1,span,h5{
-    color: white;
-}
-.banner-findmatch{
-    width: 90%;
-    height: auto;
-    padding: 25px;
-    background-color: black;
-    border-radius: 5px;
-    display: table;
-}
-.banner-findmatch ul li {
-    float: left;
-    width: 19%;
+
+  .banner-findmatch ul li {
+    width: 48%;
+    /* Full width on smaller screens */
     padding: 0px 5px;
-    margin: 0px 2px;
+    margin: 5px 2px;
     display: inline-flex;
+  }
+}
+
+.Services {
+  width: 100vw;
+  height: 170vh;
+  background-color: black;
+}
+
+.Our-services {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Our-services h1,
+h2,
+h3,
+h4,
+h5 {
+  
+  display: inline;
+  
+}
+
+.Heading {
+  width: 100%;
+  height: 30%;
+  padding: 4%;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Heading h3 {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  margin: 5px;
+  color: rgb(196, 140, 70);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+.Heading h1 {
+  margin: 3px;
+  font-weight: 600;
+  color: rgb(196, 140, 70);
+}
+
+.slider {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-slider-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 12px;
+  margin-top: 5%;
+}
+
+.card-slider {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* Adjust according to the number of cards */
+  gap: 10px;
+  transition: transform 0.5s ease;
+  width: calc(25% * 6);
+  /* 4 visible cards out of 8 */
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  border-radius: 5%;
+  /* border: 2px solid white; */
+  background-size: 100%;
+  background-position: center;
+  overflow: hidden;
+  box-sizing: 10px 10px 10px 10px white;
+}
+/* 
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 50% opacity */
+  /* z-index: 1;
+  } */ */
+  .card:nth-child(1) {
+    background-position: center top; /* Adjust as needed for each card */
+  }
+  
+  .card:nth-child(2) {
+    background-position: center top; /* Adjust as needed for each card */
+  }
+  
+  .card:nth-child(3) {
+    background-position: center top; /* Adjust as needed for each card */
+  }
+  
+  .card:nth-child(4) {
+    background-position: center top; /* Adjust as needed for each card */
+  }
+  .card:nth-child(5) {
+    background-position: center top; /* Adjust as needed for each card */
+  }
+  .card:nth-child(6) {
+    background-position: top center; /* Adjust as needed for each card */
+  }
+  .card_image{
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: 55%;
+    height: 35%;
+    border: 2px solid white;
+    border-radius: 30%;
+    padding: 8%;
+  }
+  .card_image img{
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 90%;
+  height:90%;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+}
+
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin: 10%;
+  /* Text color inside the card */
+}
+.card-content h3,h4,h5,h6 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  /* Text color inside the card */
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  background-color: rgba(250, 225, 225, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  visibility:initial;
+}
+
+.prev {
+  left: 257px;
+}
+
+.next {
+  right: 250px;
+}
+
+@media (max-width: 768px) {
+  .card-slider {
+    grid-template-columns: repeat(6, 1fr); /* Adjust according to the number of cards */
+    width: calc(50% * 6); /* 2 visible cards out of 6 */
+  }
+  .card {
+    height: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-slider {
+    grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+  }
+ 
+}
+
+.Why-choose-us{
+  width: 100vw;
+  height: 170vh;
+  background: linear-gradient(to bottom, white 20%, gray 20%, gray 80%, white 80%);
+}
+
+.Choose-us  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: linear-gradient(to bottom, white 20%, gray 20%, gray 80%, white 80%); */
+}
+
+ .Heading1 {
+  margin-top: 15%;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  padding: 4%;
+  /* border: 2px solid black; */
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ .Heading1 h3,h5 {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  margin: 5px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+ .Heading1 h1 {
+  margin: 3px;
+  font-weight: 600;
+  color: rgb(196, 140, 70);
+}
+
+
+/* .Choose-us {.
+  width: 100vw;
+  height: 170vh;
+  background-color: rgb(255, 255, 255);
+} */
+.chooseUsFooter{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ .card1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  height: 80%;
+  border-radius: 5%;
+  box-shadow: 1px 1px 1px 1px gray;
+  border: 1px solid white;
+  color: black;
+  background-color: whitesmoke;
+  background-size: 100%;
+  background-position: center;
+  overflow: hidden;
+  box-sizing: 10px 10px 10px 10px white;
+}
+
+ .card_image1{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 20px 10px 0px 10px;
+    width: 55%;
+    height: 35%;
+    /* border: 1px solid white; */
+    border-radius: 30%;
+    left: 25px;
+    
+  }
+.card_image1 img{
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 50px;
+  /* height:40%; */
+
+}
+
+
+.card-content1 {
+  position: relative;
+  z-index: 2;
+  color: black;
+  text-align: center;
+  margin: 10%;
+  /* Text color inside the card */
 }

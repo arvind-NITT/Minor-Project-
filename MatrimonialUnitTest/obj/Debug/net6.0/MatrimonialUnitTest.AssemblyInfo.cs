@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatrimonialUnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19f5051aaaad9239055c14202f775832bacf51dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d693747e71cf43a78b2453f26d29c97ab6389475")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatrimonialUnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatrimonialUnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
