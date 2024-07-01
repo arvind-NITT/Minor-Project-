@@ -171,7 +171,8 @@ namespace MatrimonialApp.Services
                  {
                      MatchID = m.MatchID,
                      MatchedUserID = m.UserID1 == userId ? m.UserID2 : m.UserID1,
-                     MatchStatus = m.MatchStatus
+                     MatchStatus = m.MatchStatus,
+                     MatchDate = m.MatchDate
                  })
                  .Join(_context.Users,
                      m => m.MatchedUserID,
@@ -195,7 +196,8 @@ namespace MatrimonialApp.Services
                          MatchedReligion = p.Religion,
                          MatchedCaste = p.Caste,
                          MatchedMotherTongue = p.MotherTongue,
-                         MatchedProfilePicture = u.MatchedUser.ProfilePicture
+                         MatchedProfilePicture = u.MatchedUser.ProfilePicture,
+                         MatchDate= u.Match.MatchDate,
                      })
                  .ToListAsync();
 
@@ -302,6 +304,13 @@ namespace MatrimonialApp.Services
             var today = DateTime.Today;
             var age = today.Year - birthDate.Year;
             if (birthDate.Date > today.AddYears(-age)) age--;
+            return age;
+        } 
+        
+        private int CalculateAgeForMatch(DateTime birthDate)
+        {
+            var today = DateTime.Today;
+            var age = today.Year - birthDate.Year;
             return age;
         }
 

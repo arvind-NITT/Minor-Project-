@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     const totalCards = document.querySelectorAll('.card').length;
     let visibleCards = window.innerWidth <= 768 ? 2 : 4; // Change visibility based on screen size
-    const cardWidth = cardSlider.querySelector('.card').offsetWidth;
+    const cardWidth = cardSlider.querySelector('.card').offsetWidth +20;
   
     function updateSliderPosition() {
       const maxIndex = totalCards - visibleCards;
@@ -30,17 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (currentIndex < 0) {
         currentIndex = maxIndex; // Set to last position for circular effect
       }
-      const offset = -currentIndex * cardWidth;
+      const offset = -currentIndex * cardWidth ;
       cardSlider.style.transform = `translateX(${offset}px)`;
     }
   
     prevButton.addEventListener('click', () => {
-      currentIndex -= visibleCards;
+      currentIndex += 1;
       updateSliderPosition();
     });
   
     nextButton.addEventListener('click', () => {
-      currentIndex += visibleCards;
+      currentIndex -= 1;
       updateSliderPosition();
     });
   
@@ -52,4 +52,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize slider position
     updateSliderPosition();
   });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+  
+    document.querySelectorAll('.Gallery1').forEach(element => {
+      observer.observe(element);
+    });
+    document.querySelectorAll('.Gallery2').forEach(element => {
+      observer.observe(element);
+    });
+  });
+  
   

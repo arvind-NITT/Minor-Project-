@@ -3,6 +3,7 @@ using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
@@ -13,6 +14,7 @@ namespace MatrimonialApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;

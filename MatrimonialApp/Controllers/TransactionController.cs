@@ -1,6 +1,7 @@
 ﻿using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -9,6 +10,7 @@ namespace MatrimonialApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService _transactionService;

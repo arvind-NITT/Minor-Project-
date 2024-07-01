@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>admin page</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-logo ">
+        <img src="Images/wedding matromini.png" alt="" />
+      </div>
+
+      <div class="nav-search">
+        <input placeholder="search here" class="search-input" />
+      </div>
+      <div class="nav-singin border">
+        <!-- <img src="Images/notification image.png" alt="">   -->
+      </div>
+      <div class="nav-return border"></div>
+      <div class="nav-cart border"></div>
+    </div>
+  </header>
+
+  <div class="fulldisplay">
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update price</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- <input type="text"  id="price-input" name="price">
+           <input type="text" name="" id="Descri-input" name="Descri"> -->
+           <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">New price</label>
+            <input type="email" class="form-control" id="price-input" name="price" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="Descri-input" name="Descri" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"  id="save-changes-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="Dashboard">
+      <!-- first row work will be strated -->
+      <div class="dashboardrow">
+        <ul class="m-0" style="padding:10px; font-size:18px; ">
+          <li class="allpayment" style="padding:6px;font-weight:600;font-size:14px;">
+            <div class="d-grid gap-2">
+
+
+              <button class="btn rounded-pill" type="button" style="background-color: #dfebf4;"> <i
+                  class="fa-solid fa-gauge"></i>
+                Dashboard</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul class="m-0" style="font-size:14px;">
+          <li class="allpayment" >
+            <div class="accordion accordion-flush " id="accordionFlushExample">
+              <div class="accordion-item ">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                    style="background-color: #f7f9fa;">
+                    User
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body p-0">
+                    <ul class="p-0">
+                      <li>
+                        <div class="dashboardrow">
+                          <ul class="p-0" style=" font-size:18px;">
+                            <li class="allpayment" style="padding:6px;font-weight:600;font-size:20px;">
+                              <div class="d-grid w-100">
+                                <button class="btn " type="button" style="background-color: #f5f7f8; text-align: left;">
+                                  All Users</button>
+                              </div>
+                            </li>
+                            <li class="allpayment" style="padding:6px;font-weight:600;font-size:20px;">
+                              <div class="d-grid">
+
+
+                                <button class="btn " type="button" style="background-color: #f5f7f8; text-align: left;">
+                                  Free Users</button>
+                              </div>
+                            </li>
+                            <li class="allpayment" style="font-weight:600;font-size:20px; text-align: left;">
+                              <div class="d-grid">
+
+
+                                <button class="btn " type="button" style="background-color: #f5f7f8; text-align: left;">
+                                  Premium Users</button>
+                              </div>
+                            </li>
+                            <li class="allpayment" style="padding:6px;font-weight:600;font-size:20px;text-align: left;">
+                              <div class="d-grid ">
+                                <button class="btn " type="button" style="background-color: #f5f7f8; text-align: left;">
+                                  Find A User</button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- first row work will be closed -->
+
+      <div class="dashboardrow">
+        <ul>
+
+          <div class="PAYMENTS">PAYMENTS</div>
+      </div>
+      </ul>
+      <div class="dashboardrow">
+        <ul style="padding:10px;  font-size:18px; ">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-regular fa-money-bill-1 "
+              style="margin-right:15px;"></i> All Payments </li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-regular fa-money-bill-1"
+              style="margin-right:15px;"></i> Pricing Plans</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-regular fa-money-bill-1"
+              style="margin-right:15px;"></i> Payment gateway</li>
+
+          <div class="SETTINGS">SETTINGS</div>
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px;">
+          <li class="allpayment" style="padding:6px;font-weight:500;font-size:20px;"><i class="fa-solid fa-gear"
+              style="margin-right:15px;"></i>site setting</li>
+          <div class="SETTINGS">APPEARANCE</div>
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px; ">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-blog"
+              style="margin-right:15px;"></i>Website Logo </li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-paintbrush"
+              style="margin-right:15px;"></i> Color Setting</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-heart-crack"
+              style="margin-right:15px;"></i> Media Library</li>
+          <div class="SETTINGS">CMS
+          </div>
+        </ul>
+
+      </div>
+
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px; ">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-house"
+              style="margin-right:15px;"></i> Home Page </li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-text-width"
+              style="margin-right:15px;"></i> All profile filters</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-text-width"
+              style="margin-right:15px;"></i>All pages</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-text-width"
+              style="margin-right:15px;"></i>All Text Update</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-text-width"
+              style="margin-right:15px;"></i>Footer</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-regular fa-file-image"
+              style="margin-right:15px;"></i>Dummy Images</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-envelope"
+              style="margin-right:15px;"></i>Mail templates</li>
+          <div class="SETTINGS">OTHERS
+          </div>
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px;">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-regular fa-comment-dots"
+              style="margin-right:15px;"></i>All Enquirity</li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-file-export"
+              style="margin-right:15px;"></i>Export</li>
+          <div class="SETTINGS"> TEMPLATE
+          </div>
+
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px; ">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-chart-line"
+              style="margin-right:15px;"></i>Activation </li>
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-tags"
+              style="margin-right:15px;"></i>Template updates</li>
+          <div class="SETTINGS">SIGN OUT
+
+          </div>
+        </ul>
+      </div>
+      <div class="dashboardrow">
+        <ul style="padding:10px; font-size:18px;">
+          <li class="allpayment" style="padding:6px;font-weight:500;"><i class="fa-solid fa-right-from-bracket"
+              style="margin-right:15px;"></i> Log Out</li>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="content-area container">
+
+
+      <div class="Admin-Dashboard">
+        <div style="margin-top:15px; font-size: 25px;">Pricing Details</div>
+        <div class="clasicalfont">
+          <nav aria-label="breadcrumb" style="font-size: 15px;">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" style="text-decoration: none;">Home</a></li>
+              <li class="breadcrumb-item"><a href="#" style="text-decoration: none;">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="columns  ">
+          <div class="price_box border border-1 rounded">
+               <div class="price_box_heading border-bottom ">
+        <h3 class="fs-6 fw-2" style="font-size: clamp(15px, 2vw, 18px);
+    font-weight: 600; padding-left: 4px;"> All pricing plan</h3>
+               </div>
+               <div class="price_box_details fs-6 text">
+                <table class="table table-hover fs-6 " style="color: #979797;
+                font-weight: 500;
+                font-size: clamp(11px, 2vw, 13px);
+                vertical-align: middle;">
+                    <thead class="fs-6 " >
+                        <tr style="font-size: 12px; height: 40px;">
+                          <th scope="col">NO</th>
+                          <th scope="col">PLAN NAME</th>
+                          <th scope="col">PRICE</th>
+                          <th scope="col">STATUS</th>
+                          <th scope="col">MORE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="font-size: 12px;  height: 50px;">
+                            <th scope="row">1</th>
+                            <td ><mark style="    background-color: #dfe0ff;
+                              color: #2317c6;
+                              padding: 6px;
+                              border-radius: 5px;">Basic</mark></td>
+                            <td ><mark style="background-color: #ffe0df; 
+                              color: #c66117;
+                              padding: 6px;
+                              border-radius: 5px;" >$2</mark></td>
+                            <td><mark style="background-color: #DFFFEA;
+      color: #17C653;
+                              padding: 6px;
+                              border-radius: 5px;">Active</mark></td>
+                            <td ><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-plan="Basic" data-price="2">
+                                Edit
+                              </button></td>
+                            
+                        </tr>
+                        <tr style="font-size: 12px;  height: 50px;">
+                          <th scope="row">2</th>
+                          <td ><mark style="    background-color: #dfe0ff;
+                            color: #2317c6;
+                            padding: 6px;
+                            border-radius: 5px;">Premium</mark></td>
+                          <td ><mark style="background-color: #ffe0df; 
+                            color: #c66117;
+                            padding: 6px;
+                            border-radius: 5px;">$2</mark></td>
+                          <td><mark style="background-color: #DFFFEA;
+    color: #17C653;
+                            padding: 6px;
+                            border-radius: 5px;">Active</mark></td>
+                          <td ><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-plan="Premium" data-price="2">
+                            Edit
+                          </button></td>
+                          
+                        </tr>
+                      </tbody>
+                  </table>
+               </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="copy-right">Copyright © 2023 Company.com All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- <script src="./adminscript.js"></script> -->
+   <script>
+    document.querySelectorAll('button[data-bs-toggle="modal"]').forEach(button => {
+      button.addEventListener('click', function () {
+        const plan = this.getAttribute('data-plan');
+        const price = this.getAttribute('data-price');
+
+        // Populate the modal with the current plan and price
+        document.getElementById('price-input').value = price;
+        document.getElementById('price-input').setAttribute('data-plan', plan);
+      });
+    });
+    document.getElementById('save-changes-btn').addEventListener('click', function () {
+      const plan = document.getElementById('price-input').getAttribute('data-plan');
+      const price = document.getElementById('price-input').value;
+      const descri = document.getElementById('Descri-input').value;
+
+
+      const payload = { type: plan, price: price, description: descri };
+      const token = localStorage.getItem('token');
+      fetch('http://localhost:5157/api/Admin/update-pricing-plan', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Access-Control-Allow-Origin': "*",
+            'Authorization': `Bearer ${token}`
+          },
+        body: JSON.stringify(payload),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // Add logic to handle successful response, e.g., close modal, update UI
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Add logic to handle errors
+      });
+    });
+  </script>
+</body>
+
+</html>

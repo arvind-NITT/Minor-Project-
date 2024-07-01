@@ -1,0 +1,569 @@
+*{
+    margin:0px;
+    font-family:Arial;
+    border:border-box;
+} 
+.navbar{
+    height: 65px;
+    width: 100%;
+    background: #505050;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+
+}
+.nav-logo{
+    height: 33px;
+    width: 198px;
+    padding-right: 10%;
+    display: flex;
+    margin-left: 89px;
+    overflow: hidden;
+}
+/* .border{
+    border:2px solid transparent; 
+}*/
+/* .border:hover{
+    border:1.5px solid white;
+} */
+.add-first{
+color:#cccccc;
+font-size:0.85rem;
+margin-left:15px;
+}
+.add-second{
+font: size 1rem;
+margin-left:3px;
+
+}
+.add-icon{
+    display:flex;
+    align-items:center;
+}
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 665px;
+    height: 48px;
+    border-radius: 4px;
+
+
+
+}
+.search-select{
+    background-color:#f3f3f3;
+    width:50px;
+    text-align:center;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+     border:none;
+
+}
+.search-input{
+    width:664px;
+    font-size: 1rem;
+    border: none;
+     
+}
+.search-icon
+{
+    width:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    background-color: rgb(255, 174, 0);
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    color:#0f1111;
+}
+.nav-search:hover{
+    border:2px solid orange;
+
+}
+span{
+    font-size:0.7rem;
+
+}
+.nav-second{
+    font-size:0.85rem;
+    font-weight:700;
+}
+.nav-cart i{
+    font-size:20px;
+}
+.nav-cart{
+    font-size:0.85rem;
+    font-weight:700;
+}
+
+.fulldisplay {
+    height: auto;
+    width: 98%;
+    /* border: 2px solid green; */
+    display: flex;
+    background-color: #ffffff;
+
+}
+
+.Dashboard {
+    height: 100%;
+    width: 23%;
+    border-right: 1px solid rgb(245, 230, 230);
+    padding: 25px;
+    font-size: 20px;
+}
+.dashboardrow {
+    border-bottom: 1px solid rgb(245, 230, 230);;
+    /* padding: 10px; */
+    
+}
+/* .dashboardrow ul{
+} */
+.dashboardrow ul li{
+    list-style: none;
+    font-weight:600;
+    font-size:14px;
+}
+
+
+.PAYMENTS{
+    font-size: 15px; 
+    position: relative;
+font-weight: 600;
+right:30px;
+
+color: rgb(64, 123, 196);
+}
+/* .allpayment  {
+cursor: pointer;
+} */
+ .dashboardrow  ul li :hover{
+    color:rgb(64, 123, 196) ;
+
+ }
+ 
+ 
+.allpayment:hover{
+    color:rgb(64, 123, 196) ;
+    }
+.SETTINGS{
+    position: relative;
+    top: 15px;
+    font-size: 15px; 
+    position: relative;
+font-weight: 600;
+right:12px;
+color: rgb(64, 123, 196);
+}
+/* <i class="fa-regular fa-user" ></i> */
+
+.content-area {
+    width: 80%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Admin-Dashboard {
+    height: 65px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 44px;
+    border-bottom: 1px solid rgb(245, 230, 230);
+    list-style: none;
+
+}
+.clasicalfont{
+position: relative;
+font-size:15px;
+left:80% ;
+bottom:40%;
+}
+
+
+
+.columns {
+    flex: 1;
+    display: flex;
+    padding: 4%;
+}
+
+.column {
+    height: fit-content;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nested-rows {
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nested-row {
+    display: flex;
+    flex: 1;
+    /* border: 2px solid purple; */
+
+}
+
+.nested-column {
+    height:300px;
+    width: 100%;
+    flex: 1;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nested-rows {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nested-row {
+    /* height: ; */
+    display: flex;
+    flex: 1;
+}
+
+ .nested-column {
+    height: 198px;
+    flex: 1;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data{
+    height:170px;
+    width: 220px;
+    background-image: url(./Images/—Pngtree—square\ pattern\ blue\ world\ map_7325629.png);
+    background-size: cover;
+    background-color: #00b77c;
+    /* border: 1px solid black; */
+    /* background-color: #dee2e6; */
+    color:white;
+    border-radius: 12px;
+}
+.data img{
+    border-radius:100px;
+    position: relative;
+    left: 70%;
+    top: 15px;
+}
+.subdata{
+    position: relative;
+    bottom: 31%;
+    left: 4%;
+    
+}
+.subdata h2,h3,h4,h5,h6{
+    font-size: 10px;
+    
+}
+.new-registrationlower{
+    height:170px;
+    width: 220px;
+    /* border: 1px solid black; */
+    background-color: #dee2e6;
+    color:rgb(6, 6, 6);
+    border-radius: 12px;
+}
+.new-registrationlowersubdata img{
+    border-radius:100px;
+    position: relative;
+    width: 80%;
+    /* top: 15px; */
+    /* right: 10px; */
+}
+.new-registrationlowersubdata{    position: relative;
+    /* bottom: 10%; */
+    left: 10%;
+    top: 15%;
+}
+
+.allmembers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:170px;
+    width: 220px;
+    background-color: white;
+    color:rgb(11, 10, 10);
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px 1px whitesmoke;
+}
+.allmembersunder{
+
+    width: 120px;
+    
+    /* border: 1px solid black; */
+   
+}
+.allmembersundersubdata img{
+    position: relative;
+    width: 100%;
+
+}
+.allmembersundersubdata{
+    position: relative;
+
+
+}
+.totleearning{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:170px;
+    width: 220px;
+    /* border: 1px solid black; */
+    background-color: white;
+    color:rgb(10, 9, 9);
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px 1px whitesmoke;
+
+}
+
+.totleearningsubdata{
+    width: 120px;
+    position: relative;
+}
+.totleearningsubdata img{
+    position: relative;
+
+    width: 100%;
+}
+
+.LIVE-VISITOS{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:170px;
+    width: 220px;
+    /* border: 1px solid black; */
+    background-image: url(./Images/—Pngtree—square\ pattern\ blue\ world\ map_7325629.png);
+    background-size: cover;
+    background-color: #00adff26;
+    color:rgb(10, 9, 9);
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px 1px whitesmoke;
+}
+
+.LIVE-VISITOSsubdata{
+    position: relative;
+    width: 170px;
+}
+.LeadEnquiry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:170px;
+    width: 220px;
+    /* border: 1px solid black; */
+    background-image: url(./Images/—Pngtree—square\ pattern\ blue\ world\ map_7325629.png);
+    background-size: cover;
+    background-color:  #7d8387cf;
+    color:rgb(10, 9, 9);
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px 1px whitesmoke;
+
+}
+
+.LeadEnquirysubdata{
+    width: 140px;
+    position: relative;
+}
+.LeadEnquirysubdata img{
+
+width: 70%;
+}
+
+.column2 {
+    position: relative;
+    top: 20px;
+
+    /* border: 2px solid orange; */
+    display: none;
+    flex-direction: column;
+}
+.nested-rows1{
+    height:px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bottom-colom {
+    flex: 1;
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column; 
+}
+.nested-column1 {
+    height:450px;
+    flex: 1;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-bottom-colom1{
+    height:px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.sub-nested-column1 {
+    height:450px;
+    flex: 1;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.bottom-column {
+    width: 100%;
+    height: 1000px; /* This should match the height of the .columns */
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #e42828; */
+}
+.bottom-column1{
+    height:100%;
+    width: 47%;
+    background-color:rgb(249, 249, 250);
+    /* border:2px solid gray; */
+    border-radius: 5%;
+    margin: 0% 2%;
+    padding: 5%;
+    box-shadow: -1px -1px 2px 2px #f1eeec;
+}
+/* .bottom-column2{
+    height:100%;
+    width: 50%;
+    background-color:yellow;
+} */
+.NO{
+    position: relative;
+width:10%;
+height:50%;
+color:gray;
+
+
+}
+.PROFILE {
+    position: relative;
+    width:41%;
+    height:30%;
+    display: flex;
+    flex-direction: row;
+    color:gray;
+
+  
+}
+.PROFILE-content{
+    position: relative;
+    width:100%;
+    height:50%;
+    margin: 10%;
+     display: inline-block;
+     white-space: normal;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+}
+
+.PROFILE img{
+    position: relative;
+    margin-top: 14px;
+height: 60px;
+width: 60px;
+border-radius: 15%;
+}
+
+.PHONE{
+    position: relative;
+    width:15%;
+    height:20%;
+color:gray;
+}
+
+.JOIN-DATE{
+    position: relative;
+    width:17%;
+    height:50%;
+    color:rgb(133, 180, 61);
+
+}
+.PLAN-TYPE{
+    position: relative;
+    width:17%;
+    height:50%;
+    color:gray;
+
+}
+td{
+    margin-top: 15px;
+    padding: px;
+}
+.jioiningdate{
+
+   height:12%;
+    width: 100%;
+    position: relative;
+     bottom:30px;
+     padding: 3%;
+
+}
+.Recent_members{
+    font-size: 20px;
+    font-weight: 300;
+    color: #0f1111;
+}
+
+.Recently_joined_members{
+    font-size: 15px;
+    font-weight: 300;
+    color: #949191;
+    position: relative;
+ top:2px;
+}
+.copy-right {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 14px;
+  }
+  
+  .EXPAIRY-DATE{
+    position: relative;
+    width:17%;
+    height:50%;
+    color:rgb(249, 133, 133);
+  }
+  footer{
+    width:100%;
+    height: 70px;
+    background-color: #0e0e0e;
+  }
+
+  .price_box{
+    width: 95%;
+    height: auto ;
+    border: 1px solid rgb(179, 172, 172);
+   padding: 3%;
+  }

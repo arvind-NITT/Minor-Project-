@@ -1,6 +1,7 @@
 ﻿using MatrimonialApp.Interfaces;
 using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -9,6 +10,7 @@ namespace MatrimonialApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
     public class SubscriptionController : ControllerBase
     {
         private readonly ISubscriptionService _subscriptionService;

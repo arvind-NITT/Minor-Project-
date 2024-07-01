@@ -1,0 +1,501 @@
+* {
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+}
+body {
+    background: rgb(251, 248, 237);
+    overflow-x: hidden !important;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, rgb(255 251 238) 100%);
+    background-attachment: fixed;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    font-weight: 800px;
+    font-family: "Playfair Display", serif;
+    padding: 10px;
+    box-sizing: border-box;
+
+   
+
+}
+.container {
+    height: auto;
+    display: flex;
+    width: 90%; /* Set the width of the container */
+    position: relative;
+    padding: 4%;
+}
+.custom-width {
+    max-width: 90% !important; /* Adjust the width of the container */
+}
+
+
+.column {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column-1 {
+    width: 25%;
+    height: auto;
+     /* background-color: #f3ebeb;  */
+    box-shadow: 4px 4px 8px rgba(204, 198, 198, 0.2), -2px -2px 8px rgba(0, 0, 0, 0.1);
+} 
+.row {
+    width: 100%;
+    height: auto;
+    padding: 10px ;
+    /* border-bottom: 1px solid #000; */
+}
+
+.row:last-child {
+    width: auto;
+
+    border-bottom: none; /* Remove border from the last row */
+}
+.row1{
+margin-bottom: 10px;    
+font-size: 17px;
+    font-weight: 500;
+    color: #843b63;
+    font-family: "Playfair Display", serif;
+}
+
+
+.icon-border {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #843b63;
+    border: 2px solid #370c24af; /* Add border around the icon */
+    border-radius:10px ; /* Make the border round */
+    /* padding: 5px; */
+    margin-right: 5px;
+}
+.Send_your_queries{
+    
+    height: 180px;
+    width: 180px;
+    background-color: #374437f4;
+  position: relative;
+  top: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7%;
+  text-align: center;
+  color: white;
+}
+
+ .column-2 {
+    width: 80%;
+    height:auto;
+    /* background-color: #db1919; */
+} 
+ .Profile_heading{
+  height: 42px;
+    width:100%;
+    position: relative;
+    /* background-color: #f8eee7; */
+    font-size: 20px;
+    font-weight: 600;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.sideicons{
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: contents;
+}
+ .Profile_heading_left{
+    height:80px;
+    width:40%;
+    position: relative;
+    /* background-color: #e8d1c1; */
+    font-size: 20px;
+    font-weight: 500;
+    display: flex; 
+    color:#a16304;
+ align-items: center;
+ font-family: "Playfair Display", serif;
+}
+.card-title:hover{
+    color: rgb(196, 84, 84);
+
+}
+
+.profile_picture{
+    height:auto;
+    width: 100%;
+/* background-color: #746a63; */
+ border: 2px solid red;
+  overflow: hidden;
+}   
+.img-fluid {
+    transition: transform 0.5s ease; /* Smooth transition for the hover effect */
+}
+.img-fluid:hover {
+    transform: scale(1.04); /* Scales the image by 10% on hover */
+  
+}
+.card:hover .card-title {
+    color: rgb(196, 84, 84);
+}
+
+  .heading_login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .pannel2 {
+    height: 30px;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(118, 69, 8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Poppins, sans-serif
+  }
+  
+  .pannel-option2 {
+    display: flex;
+    height: 40px;
+  }
+  
+  .pannel-first2 {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .pannel-second2 {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    justify-content: flex-end;
+    /* border: 0.8px solid gray; */
+  }
+  
+  .social-icons2 {
+    height: 100%;
+    width: 90px;
+    border: 0.8px solid rgb(167, 158, 158);
+    /* padding: 15px; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #f5f4e6;
+  
+  }
+  .sicons{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgb(163, 162, 162);
+    padding: 5px;
+  }
+  .sicons img {
+    height: 20px;
+    width: 20px;
+    filter: invert(100%) brightness(100%) contrast(100%);
+  }
+  
+  .border2 {
+    border-left: 0.8px solid rgb(156, 152, 152);
+    height: 100%;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-work2 {
+    width: 171px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-work2 p {
+    color: white;
+    text-align: center;
+    display: contents;
+  }
+  
+  .homtop2 {
+    position: sticky;
+    float: left;
+    top: 0px;
+    z-index: 1000;
+    padding: 15px 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Light blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    box-shadow: rgba(51, 51, 51, 0.14) 0px 11px 11px -11px;
+  }
+  
+  .container2 {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: end;
+  }
+  
+  .logo2 {
+    height: 47px;
+  }
+  
+  #logo2 {
+    width: 95%;
+    height: 45px;
+  }
+  
+  .Menu2 {
+    width: 47%;
+    color: #69471c;
+    display: flex;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+    border: 2px solid transparent;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .smenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins, sans-serif
+  }
+  
+  span{
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: small;
+    color: #66451c;
+    margin: 0px;
+    line-height: 20px;
+    font-stretch: extra-condensed;
+  }
+  .adviser2 {
+    color: #607d8b;
+  }
+  
+  .name2 {
+    color: #66451c;
+  }
+  
+  .add2 {
+    padding: 0px;
+  }
+  
+  .team2 {
+    display: flex;
+    width: 20%;
+  }
+  
+  .team2 img {
+    margin: 10px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .homtop2 {
+    justify-content: space-between;
+  }
+  
+  .Advisor2 {
+    color: #746a63;
+    font-size: small;
+  }
+  
+  .footer-custom {
+    margin-top: 70px;
+    height: 500px;
+  }
+  
+  .foot-panel1-custom {
+    color: white;
+    height: 15%;
+    width: 70%;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 1rem;
+  
+    font-family: 'Josefin Sans';
+    margin-left: 14%;
+    background-color: hsla(335, 93%, 60%, 0.941);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 47px;
+    left: 23px;
+    z-index: 6;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 1px #746a63;
+  }
+  
+  .foot-panel2-custom {
+    background-color: #dee2e6;
+    color: #212529;
+    height: 75%;
+    width: 100%;
+    border: 0.2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 5;
+    position: relative;
+  }
+  
+  .sfoot-panel2-custom h4{
+    font-size: 16px;
+    margin: 10px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    color: #212529;
+  }
+  .sfoot-panel2-custom a{
+    color: #212529;
+    font-size: 15px;
+    /* padding-bottom: 25px; */
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+  }
+  .sfoot-panel2-custom {
+    position: relative;
+    top: 132px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    color: #343a40;
+  }
+  
+  .sfoot-panel2-custom ul {
+    border-right: 1px solid #ccc;
+  }
+  
+  .hello-custom {
+    font-size: 20px;
+    color: #343a40;
+    margin: 20px;
+  }
+  
+  a.custom-link {
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .content-section-custom {
+    width: 100%;
+    margin: 10px 81px;
+    height: 100%;
+    color: #415764;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .foot-panel3-custom {
+    background-color: #dee2e6;
+    color: #212529;
+    border-top: 0.5px solid white;
+    height: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .footerline-custom {
+    margin-bottom: 0%;
+    color: #212529;
+    font-size: 15px;
+    /* padding-bottom: 25px; */
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+  }
+  
+  .foot-panel4-custom {
+    background-color: #e9ecef;
+    height: 45px;
+    color: #e9ecef;
+    justify-content: center;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .copy-right-custom {
+    color: #212529;
+    font-size: 15px;
+    /* padding-bottom: 25px; */
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    position: relative;
+    top: 14px;
+  }
+  
+  .sicons1-custom {
+    display: flex; /* Ensures icons are displayed in a row */
+  }
+  
+  .sicons1-custom i {
+    font-size: 34px; /* Adjust the font size as needed */
+    margin-right: 10px;
+    display: flex; /* Optional: Adds spacing between icons */
+  }
+  

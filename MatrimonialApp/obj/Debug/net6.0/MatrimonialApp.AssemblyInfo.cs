@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatrimonialApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19f5051aaaad9239055c14202f775832bacf51dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6508f4cae64dd877c9848cd65e498caa6e8ab1e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatrimonialApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatrimonialApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

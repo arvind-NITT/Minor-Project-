@@ -80,6 +80,16 @@ namespace MatrimonialApp
 
             #endregion
 
+            #region CORS
+            builder.Services.AddCors(opts =>
+            {
+                opts.AddPolicy("AllowAll", options =>
+                {
+                    options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                });
+            });
+            #endregion
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -88,6 +98,7 @@ namespace MatrimonialApp
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
 

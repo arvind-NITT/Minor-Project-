@@ -3,6 +3,7 @@ using MatrimonialApp.Models;
 using MatrimonialApp.Models.DTOs;
 using MatrimonialApp.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -11,6 +12,7 @@ namespace MatrimonialApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
     public class MatchController : ControllerBase
     {
         private readonly IMatchService _matchService;

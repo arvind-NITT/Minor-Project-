@@ -23,6 +23,7 @@
         public string MatchedCaste { get; set; }
         public string MatchedMotherTongue { get; set; }
         public string MatchedProfilePicture { get; set; }
+        public DateTime MatchDate { get; set; }
 
     }
 }
